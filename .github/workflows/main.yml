@@ -1,0 +1,44 @@
+# This is a basic workflow to help you get started with Actions
+# https://github.com/marketplace/actions/ftp-deployer
+name: CI
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  upload_to_sftp:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: executing remote ssh commands using password
+        uses: sand4rt/ftp-deployer@v1.3
+        with:
+          sftp: true # optional
+          host: appserver.dev.7a1447d4-c326-4258-9978-ef8809f9920e.drush.in
+          username: dev.7a1447d4-c326-4258-9978-ef8809f9920e
+          password: ${{ secrets.USER_PRIVATE_KEY }}
+          port: 2222
+          # remote_folder: ${{ secrets.FTP_REMOTE_FOLDER }} # optional, remote path of your FTP server
+          remote_folder: ./code
+          local_folder: ./ # optional, local path, default is: dist
+          cleanup: true  # optional, remove existing files inside FTP remote folder
+          # exclude: '.git/**'
+          # optional, e.g. ['node_modules/**', '.git/**', '*.env'] 
+          pasive: true # optional
+           # include: [] # optional, e.g. ['dist']
+         # optional, e.g. ['node_modules/**', '.git/**', '*.env']
+          # PASSWORD: ${{ secrets.PASSWORD }}
+          # PASSWORD: ${{ secrets.USER_PRIVATE_KEY }}
+          # PASSWORD:USER_PUBLIC_KEY
+          # PASSWORD: ${{ secrets.USER_PUBLIC_KEY }}
+          # local_path: './*'
+          # DIR_ON_SERVER:  ./code
+          # MODE: GIT
+          #args: '-o ConnectTimeout=5'
+          # mirror_options: "--exclude-glob=.git*/ --verbose"

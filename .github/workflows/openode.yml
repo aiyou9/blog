@@ -1,0 +1,20 @@
+name: opeNode
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-on-openode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      -
+        name: deploy
+        run: |
+          export OPENODE_TOKEN="${{ secrets.OPENODE_TOKEN }}"
+          export OPENODE_SITE_NAME="${{ secrets.OPENODE_SITE_NAME }}"
+          sudo npm i -g openode
+          openode ci-conf $OPENODE_TOKEN $OPENODE_SITE_NAME
+          openode deploy

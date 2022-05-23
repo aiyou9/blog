@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="山人妙计馆">
+<meta name="description" content="大隐于市者，能">
+<meta name="theme-color" content="#000">
+<title>凤梧山居</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1653321638689">
+<link rel="stylesheet" href="/media/css/gemini.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.loli.net/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/androidstudio.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163842540-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163842540-1');
+</script>
+
+
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8483238d846a0429122f3728e9c4b441";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>凤梧山居</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">精于心，简于形，胜于德</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-globe"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives" target="_self">
+                  <i class="fa fa-globe"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags" target="_self">
+                  <i class="fa fa-globe"></i> 标签
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item nav-item-active">
+                <a href="/friends/" target="_blank">
+                  
+                    🔱友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+      <div
+        class="section-layout gemini ">
+        <div class="section-layout-wrapper">
+          <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">凤梧山人</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">5</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://blog.xbreeding.com/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/aifact">
+              <i class="fa fa-github-alt" title="GitHub"></i>
+            </a>
+          
+            <a href="http://sharepan.epizy.com/">
+              <i class="fa fa-cloud-download" title="分享盘"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="/media/js/magic/clock.js"></script>
+  </div>
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+            <div class="section-box gemini box-shadow-wrapper">
+              <section class="friends-section bg-color slide-down-in">
+                <div class="firends-box" align="center">
+                  <h1 class="firends-title" itemprop="name headline">
+                    友情链接
+                  </h1>
+                  
+                    
+                      <a href="https://qyi.io/" target="_blank">
+                        <div class="firends-item">
+                          <img src="https://ftp.bmp.ovh/imgs/2020/04/e8694ab50e76d37c.png" />
+                          <div class="right">
+                            <div class="top">
+                              浅忆博客
+                            </div>
+                            <div class="bottom">
+                              技术博客
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      
+                      <a href="https://www.yhdzz.cn/" target="_blank">
+                        <div class="firends-item">
+                          <img src="https://s-bj-1934-cdn-yhdzz-blog.oss.dogecdn.com/xiaoman1221s-blog-bead.jpg" />
+                          <div class="right">
+                            <div class="top">
+                              小满の窝
+                            </div>
+                            <div class="bottom">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      
+                        
+                </div>
+                <hr>
+                <div style="text-align:center">
+                  <span class="with-love">
+                    <i class="fa fa-heart"></i>
+                  </span>
+                  <span class="language" data-lan="leave-message">如需添加友链,可以在关于中找到我的联系方式告知我</span>
+                  <span class="with-love">
+                    <i class="fa fa-heart"></i>
+                  </span>
+                </div>
+                <hr>
+                <div class="friends-note">
+                  <p><strong class="language" data-lan="format">友链格式：</strong></p>
+                  <ul>
+                    <li><span class="language" data-lan="site-name">网站名称：</span>凤梧山居</li>
+                    <li><span class="language" data-lan="site-link">网站地址：</span><a href="https://blog.xbreeding.com" data-pjax-state="">https://blog.xbreeding.com</a></li>
+                    <li><span class="language" data-lan="site-desc">网站描述：</span>大隐于市者，能</li>
+                    <li><span class="language" data-lan="site-img">网站头像：</span>
+                      <a href="https://blog.xbreeding.com/images/avatar.png">https://blog.xbreeding.com/images/avatar.png</a>
+                    </li>
+                  </ul>
+                </div>
+                
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('https://upimage.alexhchu.com/2020/04/21/47eda59424daa.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'nJORPSLvvCqPfrMlo68UuVG5-9Nh9j0Va',
+    appKey: 'TRw51kJ6vmrCYwVGAWTimnwl',
+    avatar: 'wavatar',
+    placeholder: '',
+    pageSize: '',
+    lang: 'zh-cn',
+    enableQQ: 'true' === 'false',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+  });
+</script>
+
+              </section>
+            </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <center id="runTimeBox">
+      已运行:<span id="run_time"></span>
+    </center>
+    <span id="busuanzi_container_site_pv">浏览数:<span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数:<span id="busuanzi_value_site_uv"></span> 人</span>
+
+    <script>
+      BirthDay = new Date('2019年12月1日');
+      if (BirthDay.getTime()) {
+        function runTime() {
+          str = "";
+          today = new Date();
+          timeold = today.getTime() - BirthDay.getTime();
+          msPerDay = 24 * 60 * 60 * 1000;
+          e_daysold = timeold / msPerDay;
+          daysold = Math.floor(e_daysold);
+          str += daysold + "天";
+          return str;
+        }
+        setInterval(function () {
+          $("#run_time").html(runTime());
+        }, 1000);
+      } else {
+        document.querySelector('.footer').removeChild(document.querySelector('#runTimeBox'));
+      }
+    </script>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+    
+        <div class="gemini back-to-top" id="back_to_top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span class="scrollpercent"> <span id="back_to_top_text">0</span>% </span>
+            
+        </div>
+        
+          
+            
+              <div class="bg-img">
+                <img src="/media/images/1.jpeg" />
+              </div>
+              
+                
+                  
+                        
+</div>
+<script>
+  let sideBarOpen = "sidebar-open";
+  let body = document.body;
+  let back2Top = document.querySelector("#back_to_top"),
+    back2TopText = document.querySelector("#back_to_top_text"),
+    drawerBox = document.querySelector("#drawer_box"),
+    rightSideBar = document.querySelector(".sidebar"),
+    viewport = document.querySelector("body");
+
+  function scrollAnimation(currentY, targetY) {
+    let needScrollTop = targetY - currentY;
+    let _currentY = currentY;
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10);
+      _currentY += dist;
+      window.scrollTo(_currentY, currentY);
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY);
+      } else {
+        window.scrollTo(_currentY, targetY);
+      }
+    }, 1);
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener("scroll", function (e) {
+    let percent =
+      (document.scrollingElement.scrollTop /
+        (document.scrollingElement.scrollHeight -
+          document.scrollingElement.clientHeight)) *
+      100;
+    if (percent > 1 && !back2Top.classList.contains("back-top-active")) {
+      back2Top.classList.add("back-top-active");
+    }
+    if (percent == 0) {
+      back2Top.classList.remove("back-top-active");
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  let hasCacu = false;
+  window.addEventListener("resize", function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (
+      (!hasCacu && back2Top.classList.contains("pisces")) ||
+      back2Top.classList.contains("gemini")
+    ) {
+      let sideBar = document.querySelector(".sidebar");
+      let navUl = document.querySelector("#site_nav");
+      sideBar.style =
+        "margin-top:" + (navUl.offsetHeight + navUl.offsetTop + 15) + "px;";
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false,
+    MOTION_TIME = 300,
+    RIGHT_MOVE_DIS = "320px";
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll(".right-motion");
+    let right = drawerBox.classList.contains("right");
+
+    let transitionDir = right
+      ? "transition.slideRightIn"
+      : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingRight: "0px",
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS,
+      };
+      closeProp = {
+        paddingLeft: "0px",
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, "stop");
+      jQuery.Velocity(viewport, "stop");
+      jQuery.Velocity(rightMotions, "stop");
+      if (open) {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: RIGHT_MOVE_DIS,
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, transitionDir, {});
+            },
+          }
+        );
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME,
+        });
+      } else {
+        jQuery.Velocity(
+          rightSideBar,
+          {
+            width: "0px",
+          },
+          {
+            duration: MOTION_TIME,
+            begin: function () {
+              jQuery.Velocity(rightMotions, {
+                opacity: 0,
+              });
+            },
+          }
+        );
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME,
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle("muse-line");
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    };
+  }
+
+  // 链接跳转
+  let newWindow = "true";
+  if (newWindow === "true") {
+    let links = document.querySelectorAll(".post-body a");
+    links.forEach((item) => {
+      if (!item.classList.contains("btn")) {
+        item.setAttribute("target", "_blank");
+      }
+    });
+  }
+
+  let faSearch = document.querySelector("#fa_search");
+  faSearch &&
+    faSearch.addEventListener("click", function () {
+      document.querySelector("#search_mask").style = "";
+    });
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState == "hidden") {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll(".section img");
+  images.forEach((image) => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement("a");
+    aelem.href = image.src;
+    aelem.dataset["fancybox"] = "images";
+    aelem.dataset["rel"] = "fancybox-button";
+    aelem.classList.add("fancybox");
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  });
+</script>
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.xbreeding.com/ifpea5ocF/"" data-c="
+          &lt;!-- Cloudflare Web Analytics --&gt;&lt;script defer src=&#39;https://static.cloudflareinsights.com/beacon.min.js&#39; data-cf-beacon=&#39;{&#34;token&#34;: &#34;02edb4b1101a4149aa573f04e2d042fe&#34;}&#39;&gt;&lt;/script&gt;&lt;!-- End Cloudflare Web Analytics --&gt;
+&lt;p&gt;多方寻找和测试，终于找到能部署到alwaysdata的发卡站了。&lt;br&gt;
+发卡站部署代码来自&lt;a href=&#34;https://www.ccooc.cn/555.html#cmt3226&#34;&gt;曹操博客&lt;/a&gt;&lt;br&gt;
+代码总大小为94mb，要先在alwaysdata，创建一个新账号。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645217563112.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;1-开始搭建&#34;&gt;1 开始搭建&lt;/h1&gt;
+&lt;h2 id=&#34;1-下载并上传代码&#34;&gt;1  下载并上传代码&lt;/h2&gt;
+&lt;p&gt;从&lt;a href=&#34;https://www.ccooc.cn/555.html#cmt3226&#34;&gt;曹操博客&lt;/a&gt;下载源码，使用MobaXterm或Xftp（推荐，有失败记录，可续传），&lt;a href=&#34;https://blog.xbreeding.com/qfX1_b_ai/#windows%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85mobaxterm%E5%B9%B6%E7%99%BB%E5%BD%95ssh%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C&#34;&gt;可参考之前的教程&lt;/a&gt;，上传代码压缩包，然后在ssh后台，&lt;a href=&#34;https://blog.xbreeding.com/qfX1_b_ai/#%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E9%80%90%E8%A1%8C%E5%A4%8D%E5%88%B6%E5%88%B0mobaxterm-ssh%E7%95%8C%E9%9D%A2%E5%9B%9E%E8%BD%A6%E8%BF%90%E8%A1%8C&#34;&gt;可参考之前的教程&lt;/a&gt;，解压&lt;/p&gt;
+&lt;p&gt;参考代码如下：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; cd www&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;mkdir shop ,&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;cd shop,&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;unzip 你自己的文件名.zip,&lt;/code&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645220229743.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;解压完，如下图所示：&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645220299198.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+解压后，要删除压缩包，不然会超过100mb。&lt;/p&gt;
+&lt;h2 id=&#34;2-创建数据库&#34;&gt;2 创建数据库&lt;/h2&gt;
+&lt;p&gt;登录alwaysdata后台，在mySQL中，添加数据库&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645220404224.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+设置数据库用户密码（数据库用户名太长，alwaysdata自动改设为数字）&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645220445633.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645220505975.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+记录这些信息，后面需要填写。&lt;br&gt;
+如果之前搭建过网站，现在要删除数据库里面的以前内容&lt;/p&gt;
+&lt;h2 id=&#34;3-导入数据库文件&#34;&gt;3 导入数据库文件&lt;/h2&gt;
+&lt;p&gt;点击之前图中的数据库管理软件按钮，跳转数据库管理软件&lt;br&gt;
+点击创建的数据库，然后点击import，打开本地的payeco.hl-5.com.sql文件，导入数据库&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645221638196.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645221645978.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-修改数据库信息地址&#34;&gt;4 修改数据库信息地址：&lt;/h2&gt;
+&lt;p&gt;在application/database.php文件中，填写数据库信息的文件（请勿用windows记事本，文本文档编辑代码文件，推荐VScode）&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645222399207.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 服务器地址
+&#39;hostname&#39;        =&amp;gt; &#39;数据库链接地址&#39;,
+// 数据库名
+&#39;database&#39;        =&amp;gt; &#39;数据库名&#39;,
+// 数据库用户名
+&#39;username&#39;        =&amp;gt; &#39;自己的数据库用户名&#39;,
+// 数据库密码
+&#39;password&#39;        =&amp;gt; &#39;自己设的密码&#39;,
+// 数据库连接端口
+&#39;hostport&#39;        =&amp;gt; &#39;3306&#39;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;5-alwaysdata后台配置网站&#34;&gt;5 alwaysdata后台配置网站&lt;/h2&gt;
+&lt;p&gt;进入后台网页设置界面&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645222705995.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+填写网站源代码在服务的地址，并选择PHP版本，推荐7.0&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645260006182.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;6-刷新网站并访问发卡站后台&#34;&gt;6 刷新网站，并访问发卡站后台&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645223182341.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645235754296.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+在网址后添加/admin&lt;br&gt;
+账号：admin    密码：admin&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645235797879.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;7-更换自己的域名&#34;&gt;7 更换自己的域名&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;《注意域名不要带后缀/》&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1645260028444.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;8-绑定支付方式&#34;&gt;8 绑定支付方式&lt;/h2&gt;
+&lt;p&gt;具体使用，待续&lt;/p&gt;
+&lt;h2 id=&#34;9-注册账号测试支付&#34;&gt;9 注册账号测试支付&lt;/h2&gt;
+&lt;p&gt;进入首页，注册一个商家账号，就可以进行上架商品了，具体使用，待续&lt;/p&gt;
+&lt;h1 id=&#34;10-赞赏支持作者&#34;&gt;10 赞赏，支持作者&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;如果觉得本文对您有所帮助，请点击￥赞赏￥按钮，为作者原创加油鼓劲&lt;/strong&gt;&lt;/p&gt;
+">alwaysdata部署企业级发卡站</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.xbreeding.com/KLaVVy-2Q/"" data-c="
+          &lt;h1 id=&#34;nav-doc&#34;&gt;&lt;a href=&#34;https://navdoc.super.site&#34;&gt;Nav Doc&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;自建nav3.cn部署与使用文档地址: &lt;a href=&#34;https://navdoc.super.site&#34;&gt;https://navdoc.super.site&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://jq.qq.com/?_wv=1027&amp;amp;k=eVKGeWqt&#34;&gt;感兴趣，点击链接加入qq群聊【Nav导航部署使用】&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;E5开发者订阅可绑定github，增加续期权重，但平时不用github开发，可以使用Nav3.cn，建个导航站，浏览器直接添加网址，提交后，即可产生github提交记录，活跃一下github，但续订随缘&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;官方示例网站&#34;&gt;官方示例网站：&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.nav3.cn/#/side?q=&amp;amp;id=0&amp;amp;page=0&#34;&gt;发现导航 - 精选实用导航网站&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id=&#34;项目源代码库&#34;&gt;项目源代码库&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/xjh22222228/nav&#34;&gt;GitHub - xjh22222228/nav: 🔍 发现导航 , 打造最强静态导航网站(支持SEO) | Discovery Navigation: A purely static, powerful navigation website that supports SEO and online editing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;⏰ 本项目当前主要思路，是以github为服务器后台，进行数据持久化存储，以github webAPI提交自己部署导航站的更改到github代码库，在github page，vercel，netlify等自动化部署网站，监控github代码库的提交，进行导航站静态文件的构建，这中间需要对提交的更改，重新构建大约10min左右，才能看到每次修改后的导航站。&lt;/p&gt;
+&lt;p&gt;📢 推荐部署方式：项目正在不断优化中，为了快速尝试一些新特性，以及本地优化，或二次开发，方便为项目贡献代码，推荐github fork后，复制main，创建新分支mynav，在mynav分支中，修改配置，然后进行多方部署。&lt;br&gt;
+&lt;img src=&#34;https://sharepan.epizy.com/images/2022/01/02/3NcRjAZoCA/avatar.png&#34; alt=&#34;ssss&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;推荐side主题，标题后有快速展开合并按钮，可适配大屏显示器，快速浏览。&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id=&#34;点击以下标题即可进入nav-doc文档详细内容&#34;&gt;&lt;strong&gt;点击以下标题即可进入Nav Doc文档详细内容：&lt;/strong&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;1-前期准备&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/1-preparation&#34;&gt;1. 前期准备&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;2-创建github账号&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/2-register-github&#34;&gt;2. 创建github账号&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;3-在github-fork项目&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/3-github-fork&#34;&gt;3. 在github fork项目&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;4-拉取创建mynav分支可选步骤&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/4-creat-mynav&#34;&gt;4. 拉取，创建mynav分支(可选步骤)&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;5&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/5-change-branch&#34;&gt;5. &lt;strong&gt;修改github默认分支（可选步骤）&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;6-修改mynav分支中的navconfigts&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/6-edit-nav-config-ts&#34;&gt;6. 修改mynav分支中的nav.config.ts&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;7-部署&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/7-deployment&#34;&gt;7. 部署&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;8-使用说明&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/8-using-instruction&#34;&gt;8. 使用说明&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;9-使用技巧&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/9-using-skills&#34;&gt;9、使用技巧&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;10-更新项目&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/910-update&#34;&gt;10. 更新项目&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;11&#34;&gt;&lt;a href=&#34;https://navdoc.super.site/911-navshow&#34;&gt;11. &lt;strong&gt;优秀站点展示&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;感兴趣可以加qq群聊&#34;&gt;感兴趣可以加qq群聊&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1641076240322.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+或者点击加群快速链接&lt;br&gt;
+&lt;a href=&#34;https://qm.qq.com/cgi-bin/qm/qr?k=m5Bt2uMgUM-8xo7VJPa_i7hWQFjCda3M&amp;amp;jump_from=webapi&#34;&gt;Nav导航部署使用&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;赞赏支持作者&#34;&gt;赞赏，支持作者&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;如果觉得本文对您有所帮助，请点击&lt;em&gt;￥赞赏￥&lt;/em&gt;按钮，为作者原创加油鼓劲&lt;/strong&gt;&lt;/p&gt;
+">适配大屏，快速浏览的多主题nav3.cn开源导航站的部署与使用文档</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.xbreeding.com/qfX1_b_ai/"" data-c="
+          &lt;p&gt;先阅读上一篇&lt;a href=&#34;https://blog.xbreeding.com/nKOi9H1cL/&#34;&gt;《无验证的100mb 免费全能空间alwaysdata的注册与配置免费二级域名ssl》&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;strong&gt;重要提醒：&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;1、在alwaysdata中使用cloudreve，在管理员面板中修改保存后，有可能需要在alwaysdata后台页面中，点刷新按钮，重启cloudreve，才能生效，不过感觉有延迟，要等一段时间后alwaysdata的CDN刷新出来吧，可以自行绑定cloudflare CDN&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;2、Cloudreve最好不要设置验证码，邮箱等，一旦对域名使用自行配置的CDN，没有配置好，会加载不出来验证码，来自浅忆博客-E5技术交流群的群友：&lt;em&gt;沉吟&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jq.qq.com/?_wv=1027&amp;amp;k=52yJp9C&#34;&gt;点击此加入群聊【E5技术交流群】&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;cloudreve简介&#34;&gt;cloudreve简介&lt;/h1&gt;
+&lt;p&gt;cloudreve项目主页：&lt;a href=&#34;http://cloudreve.org/&#34;&gt;http://cloudreve.org/&lt;/a&gt;&lt;br&gt;
+cloudreve源代码地址：&lt;a href=&#34;https://github.com/cloudreve/Cloudreve/releases&#34;&gt;https://github.com/cloudreve/Cloudreve/releases&lt;/a&gt;&lt;br&gt;
+特点：&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640185471271.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+cloudreve文档&lt;br&gt;
+&lt;a href=&#34;https://docs.cloudreve.org/&#34;&gt;https://docs.cloudreve.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;github访问加速&#34;&gt;github访问加速&lt;/h1&gt;
+&lt;h2 id=&#34;fastgithub&#34;&gt;fastgithub&lt;/h2&gt;
+&lt;p&gt;下载地址：&lt;br&gt;
+&lt;a href=&#34;https://github.com/dotnetcore/fastgithub/releases&#34;&gt;https://github.com/dotnetcore/fastgithub/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;fastgithub release 2.1.2（2021年11月29日）备用下载链接：&lt;br&gt;
+&lt;a href=&#34;https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/4b52a895-d1ab-401a-977b-08060ac58fa8.zip&#34;&gt;fastgithub_win-x64.zip&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/8104f604-3224-41a5-948a-4848994c132f.zip&#34;&gt;fastgithub_linux-arm64.zip&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/6a270591-7d38-43c1-9c4f-ec54f542c7f7.zip&#34;&gt;fastgithub_linux-arm64.zip&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/d17d3aa6-b16f-4345-bd1e-73fd1612b7b5.zip&#34;&gt;fastgithub_osx-x64.zip&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;设置alwaysdata的ssh使用密码登录&#34;&gt;设置alwaysdata的ssh使用密码登录&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640148898998.jpg&#34; alt=&#34;设置ssh使用密码登录&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640149008826.jpg&#34; alt=&#34;勾选使用密码登录，提交&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;windows本地安装mobaxterm并登录ssh进行操作&#34;&gt;windows本地安装mobaxterm，并登录ssh，进行操作&lt;/h1&gt;
+&lt;p&gt;其他ssh工具也一样，mobaxterm集成了FTP，ssh比较方便，免费版就够用&lt;br&gt;
+&lt;a href=&#34;https://mobaxterm.mobatek.net/download-home-edition.html&#34;&gt;官方免费版&lt;/a&gt;&lt;br&gt;
+如果不在意泄漏密码，可以用中文优化版&lt;br&gt;
+下载地址: &lt;a href=&#34;https://xpan.cf/s/OEHB&#34;&gt;https://xpan.cf/s/OEHB&lt;/a&gt; 密码：moba&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640150882948.jpg&#34; alt=&#34;mobaxterm登录ssh&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+输入ssh密码&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640151035550.jpg&#34; alt=&#34;输入ssh密码&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640151142754.jpg&#34; alt=&#34;mobaxterm界面&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;a name=&#34;anchor&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;下载-解压-运行cloudreve&#34;&gt;下载、解压、运行cloudreve&lt;/h1&gt;
+&lt;h2 id=&#34;先到cloudreve官网软件发布页复制最新版的amd64位软件的下载链接替换下文wget命令后面链接&#34;&gt;先到&lt;a href=&#34;&#34;&gt;cloudreve官网软件发布页&lt;/a&gt;，复制最新版的amd64位软件的下载链接，替换下文wget命令后面链接。&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;（mobaxterm的ssh中粘贴命令，需要使用鼠标右键菜单，选择粘贴）&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640187913975.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+2021年12月22日 为3.4.2版本&lt;/p&gt;
+&lt;h2 id=&#34;以下代码逐行复制到mobaxterm-ssh界面回车运行&#34;&gt;以下代码逐行复制到mobaxterm ssh界面，回车运行&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;mkdir myapp &lt;/code&gt;&lt;br&gt;
+&lt;code&gt;ls&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;cd myapp&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;wget https://github.com/cloudreve/Cloudreve/releases/download/3.4.2/cloudreve_3.4.2_linux_amd64.tar.gz&lt;/code&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640188562543.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;在ftp窗口刷新目录后就能看到myapp文件夹点进入可看到下载的压缩包&#34;&gt;在ftp窗口，刷新目录后，就能看到myapp文件夹，点进入，可看到下载的压缩包&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640188668445.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640188762916.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;继续ssh命令行执行解压缩命令&#34;&gt;继续ssh命令行，执行解压缩命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tar -zxvf cloudreve_3.4.2_linux_amd64.tar.gz&lt;/code&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640189013953.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;获取cloudreve运行权限&#34;&gt;获取cloudreve运行权限&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;chmod +x ./cloudreve&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;然后执行运行命令并点击按钮刷新目录&#34;&gt;然后执行运行命令，并点击按钮，刷新目录&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;./cloudreve&lt;/code&gt;&lt;br&gt;
+此时产生两个新的文件&lt;br&gt;
+conf.ini  为配置文件&lt;br&gt;
+cloudreve.db 为数据库文件&lt;/p&gt;
+&lt;p&gt;以及给出初始管理员账号与密码&lt;/p&gt;
+&lt;p&gt;[Info]    2021-12-22 16:06:20 初始管理员账号：admin@cloudreve.org&lt;br&gt;
+[Info]    2021-12-22 16:06:20 初始管理员密码：KhfQNgLG&lt;br&gt;
+（密码应该是随机的，根据自己的来填写，登录）&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640189599677.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;高级备选方案提前查好域名在alwaysdata的port端口号-以提前编写好的confini文件运行cloudreve&#34;&gt;（高级备选方案）提前查好&lt;a href=&#34;#%E6%9F%A5%E8%AF%A2%E5%9F%9F%E5%90%8D%E5%9C%A8alwaysdata%E7%9A%84%E5%BC%80%E6%94%BEweb%E8%AE%BF%E9%97%AE%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%8F%B7&#34;&gt;域名在alwaysdata的port端口号&lt;/a&gt; 以提前编写好的conf.ini文件，运行cloudreve&lt;/h2&gt;
+&lt;p&gt;根据&lt;a href=&#34;https://docs.cloudreve.org/getting-started/config&#34;&gt;cloudreve文档&lt;/a&gt;，提前配置好相关设置，如监听端口port，mysql等数据库（提前在alwaysdata设置）&lt;/p&gt;
+&lt;p&gt;然后在启动时加入-c参数指定配置文件路径：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;./cloudreve -c home/hotnav/myapp/conf.ini&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;查询域名在alwaysdata的开放web访问的端口号&#34;&gt;查询域名在alwaysdata的开放web访问的端口号，&lt;/h2&gt;
+&lt;p&gt;alwaysdata默认免费二级域名的端口号为8100&lt;br&gt;
+绑定自己的域名，端口号从8101开始向后排&lt;br&gt;
+&lt;strong&gt;查看当前域名的端口号方法：&lt;/strong&gt;&lt;br&gt;
+1、在页面中，点击域名后的编辑按钮&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640248947068.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+2、在表面配置中选择type为你需要部署程序对应的语言，查看（有的静态语言不需要端口，如PHP，就选择user program）&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640249156230.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;右击confini-在mobaxterm默认编辑器打开-修改5212为部署域名在alwaysdata的开放web访问的端口免费提供的二级域名默认为8100并保存windows操作如果会linux命令在ssh用代码修改&#34;&gt;右击conf.ini 在mobaxterm默认编辑器打开 修改5212为部署域名在alwaysdata的开放web访问的端口，免费提供的二级域名默认为8100，并保存（windows操作，如果会linux命令，在ssh用代码修改）&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640190448765.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Fix：有时后台端口5212会被占用，显示错误，未在db中写入初始管理员登录账号，就需要把cloudreve.db文件删除，在conf.ini 修改好端口后，再次运行cloudreve，重新创建db，即可&lt;/strong&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640189740747.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;点击ssh界面使用ctrl-c-回到命令行再次输入cloudreve运行&#34;&gt;点击ssh界面，使用ctrl + c 回到命令行，再次输入./cloudreve，运行。&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640190646837.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;使用ctrl-c-退出进程进入alwaysdata网页后台配置&#34;&gt;使用ctrl + c 退出进程，进入alwaysdata网页后台配置。&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640190928461.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;选择user-program-在对应框中输入~myappcloudreve-输入myapp&#34;&gt;选择user program， 在对应框中输入~/myapp/cloudreve 输入myapp&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640191125056.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;提交后回到页面点击重启按钮刷新网站&#34;&gt;提交后，回到页面，点击重启按钮，刷新网站&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640191167382.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;访问二级域名用ssh中初始管理员账号密码登录&#34;&gt;访问二级域名，用ssh中初始管理员账号密码登录&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640191434657.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;备份cloudreve的配置与数据文件&#34;&gt;备份cloudreve的配置与数据文件&lt;/h2&gt;
+&lt;p&gt;在最好隔一段时间备份一下，如果没有使用mysql等数据库，为db单文件，只要在ssh或FTP后台下载conf.ini  cloudreve.db到本地。&lt;/p&gt;
+&lt;h2 id=&#34;更新升级cloudreve软件&#34;&gt;更新升级cloudreve软件&lt;/h2&gt;
+&lt;p&gt;首先在 MobaXterm 或alwaysdata官方提供的webssh，登录linux后台，&lt;br&gt;
+参考本文之前小节——下载、解压、运行cloudreve#anchor&lt;br&gt;
+参考&lt;a href=&#34;#%E4%B8%8B%E8%BD%BD%E8%A7%A3%E5%8E%8B%E8%BF%90%E8%A1%8Ccloudreve&#34;&gt;下载、解压、运行cloudreve&lt;/a&gt;&lt;br&gt;
+&lt;code&gt;cd myapp&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;wget https://github.com/cloudreve/Cloudreve/releases/download/3.4.2/cloudreve_3.4.2_linux_amd64.tar.gz&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;tar -zxvf cloudreve_3.4.2_linux_amd64.tar.gz&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;chmod +x ./cloudreve&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;./cloudreve&lt;/code&gt;&lt;br&gt;
+如果你数据库采用了是sql单文件db形式，即cloudreve.db，此时虽然不会替换已经产生的conf.ini 和 cloudreve.db文件，但最好在升级前备份一下&lt;/p&gt;
+&lt;p&gt;可以下载到本地，也可以用linux命令复制一份&lt;br&gt;
+&lt;code&gt;cd myapp&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;cp conf.ini conf.ini.back&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;cp cloudreve.db cloudreve.db.back&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;具体使用参照cloudreve文档httpsdocscloudreveorg&#34;&gt;具体使用，参照cloudreve文档：&lt;a href=&#34;https://docs.cloudreve.org/&#34;&gt;https://docs.cloudreve.org/&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id=&#34;注意事项&#34;&gt;注意事项&lt;/h1&gt;
+&lt;h2 id=&#34;1-不能在微软官方od或sp中删除cloudreve上传文件其文件名中前缀部分&#34;&gt;1、不能在微软官方od或sp中，删除cloudreve上传文件，其文件名中前缀部分&lt;/h2&gt;
+&lt;p&gt;cloudreve会对从cloudreve上传的文件，进行编号，加在文件名的前面，上传到云端sp或od，因此在微软官方的od和sp不要修改cloudreve上传文件名前的前缀。&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640244769034.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;赞赏支持作者&#34;&gt;赞赏，支持作者&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;如果觉得本文对您有所帮助，请点击￥赞赏￥按钮，为作者原创加油鼓劲&lt;/strong&gt;&lt;/p&gt;
+">无验证的alwaysdata部署go版的cloudreve云盘程序，直链微软SP、OD</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.xbreeding.com/nKOi9H1cL/"" data-c="
+          &lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;免费100mb全能空间，续期只要登录后台，即可，不活跃，会发邮件提醒你登录其后台。&lt;br&gt;
+&lt;strong&gt;有ssl，这样才能绑定微软的api&lt;/strong&gt;&lt;br&gt;
+&lt;big&gt;&lt;strong&gt;后台有中文界面&lt;/strong&gt;&lt;/big&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640145418662.jpg&#34; alt=&#34;全部功能简介&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;a href=&#34;https://help.alwaysdata.com/en/accounts/public-cloud-restrictions/#free-plan&#34;&gt;免费计划的规则&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://help.alwaysdata.com/en/accounts/alerts-notifications/#lack-of-activity&#34;&gt;免费计划不活跃，会发邮件提醒登录后台，登录后就不会暂停账户&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;alwaysdata主页&#34;&gt;alwaysdata主页&lt;/h1&gt;
+&lt;p&gt;https://www.alwaysdata.com/&lt;/p&gt;
+&lt;h1 id=&#34;修改语言为英文&#34;&gt;修改语言为英文&lt;/h1&gt;
+&lt;p&gt;网站当前支持&lt;a href=&#34;https://www.alwaysdata.com/fr/&#34;&gt;法语&lt;/a&gt;与&lt;a href=&#34;https://www.alwaysdata.com/en/&#34;&gt;英语&lt;/a&gt;，&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640144399140.jpg&#34; alt=&#34;切换语言&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+不过一般用浏览器翻译成中文，结合英文理解意思&lt;/p&gt;
+&lt;h1 id=&#34;选择免费订阅进入注册&#34;&gt;选择免费订阅，进入注册&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640144438852.jpg&#34; alt=&#34;选择免费订阅，进入注册&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;最好关闭代理用原生ip地址才没有信用卡认证&#34;&gt;最好关闭代理，用原生IP地址，才没有信用卡认证&lt;/h1&gt;
+&lt;p&gt;可能高级的原生IP的代理，可以不被识别，如果出现要信用卡认证，请检查代理与IP&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640144745927.jpg&#34; alt=&#34;关闭代理，用原生IP地址，才没有信用卡认证&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;关闭代理，用本地IP访问，刷新页面后，就没有信用卡认证了&lt;/p&gt;
+&lt;h1 id=&#34;填写注册信息&#34;&gt;填写注册信息&lt;/h1&gt;
+&lt;p&gt;不需要验证邮箱，email可以随便填，但是最好用境外的无个人信息的邮箱，方便接受，续期的，提醒你登录后台的提醒邮件&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640144953654.jpg&#34; alt=&#34;填写注册信息&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+继续继续填写相关信息&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640148476223.jpg&#34; alt=&#34;设置域名&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;修改后台语言为中文&#34;&gt;修改后台语言为中文&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640148650818.jpg&#34; alt=&#34;修改后台语言为中文&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;设置免费二级域名的ssl证书&#34;&gt;设置免费二级域名的ssl证书&lt;/h1&gt;
+&lt;p&gt;免费给的二级域名，可以配置ssl，以前后台会显示过期，但是不会丢失https访问，现在只要在页面，站点设置，配置强制以https访问，就可以自动加上。&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640184974878.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640185039450.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+刷新站点&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640185085924.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+成功https访问&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1640185166422.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;赞赏支持作者&#34;&gt;赞赏，支持作者&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;如果觉得本文对您有所帮助，请点击&lt;em&gt;￥赞赏￥&lt;/em&gt;按钮，为作者原创加油鼓劲&lt;/strong&gt;&lt;/p&gt;
+">无验证的100mb 免费全能空间alwaysdata的注册与配置免费二级域名ssl</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://blog.xbreeding.com/mYQjpWO-3/"" data-c="
+          &lt;p&gt;&lt;strong&gt;拜请诸方大佬，各显神通，有缘续订&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;2020/10/31更新，喜讯：微软官方上线可设置非管理员的用户直接允许添加非组织开发的应用&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;2020/12/17 更新，不好的消息：E5开发订阅开发软件，只支持自己组织账号登录&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;正在研究：Office 365 team 官方示例代码上传绑定E5的github，并远程部署后，利用浏览器自动化插件调用自动化&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;E5开发者订阅，可绑定github账号，增加续期权重，如下图所示，因此本文在官方代码的基础，还是有一定价值的，毕竟在自己github库中开发微软的team应用了，公开的库，微软应该能检测到。&lt;br&gt;
+https://developer.microsoft.com/zh-cn/microsoft-365/profile/settings/accounts-linked&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1641165067253.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;特别致谢&#34;&gt;特别致谢&lt;/h1&gt;
+&lt;p&gt;-（1）感谢 &lt;a href=&#34;https://blog.curlc.com/archives/687.html&#34;&gt;浅忆博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;-（2）感谢浅忆博客-E5技术交流群的群友：&lt;strong&gt;别恋&lt;/strong&gt;，&lt;strong&gt;流浪&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jq.qq.com/?_wv=1027&amp;amp;k=52yJp9C&#34;&gt;点击此加入群聊【E5技术交流群】&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;成功示例&#34;&gt;成功示例&lt;/h1&gt;
+&lt;p&gt;-（1）如果继续开发，可用远程动态部署服务&lt;br&gt;
+提供商：&lt;br&gt;
+&lt;a href=&#34;https://render.com&#34;&gt;https://render.com&lt;/a&gt;&lt;br&gt;
+示例站点：&lt;a href=&#34;https://teamstudy.onrender.com/&#34;&gt;https://teamstudy.onrender.com/&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://vercel.com/&#34;&gt;https://vercel.com/&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://netlify.com/&#34;&gt;https://netlify.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;-（2）国内外免费空间，上传静态文件部署，例如免费空间，如&lt;a href=&#34;https://epizy.com&#34;&gt;https://epizy.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;-（3）github page&lt;br&gt;
+拉取后文的setdiaoyong@teamAPI.git 库， 将库名改成   自己用户名.github.io&lt;br&gt;
+或直接在github中创建  用户名.github.io 的名字的库，上传代码，&lt;br&gt;
+访问地址是https://自己用户名.github.io&lt;/p&gt;
+&lt;h1 id=&#34;特别说明&#34;&gt;特别说明&lt;/h1&gt;
+&lt;p&gt;-（1）非自动调用API，靠多方部署，以及注册用户调用api保活（可能没效果），该活动信息可能不会在管理员用户活跃统计图中显示，不喜勿用。&lt;/p&gt;
+&lt;p&gt;-（2）一定要设置好应用授权，web 跳转地址Redirect URIs，和，API授权，隐式授权等，不然用户登录界面报错，或闪退，以及退出后跳转报错。&lt;/p&gt;
+&lt;p&gt;-（3）如果要用自己域名，需要设置ssl的https安全连接，不然在应用授权中心无法设置跳转网址Redirect URIs。还要设置Logout URL为 https://localhost:3000/，不然可能退出后跳转报错。&lt;/p&gt;
+&lt;p&gt;-（4）个人账户只能登录team app，无法创建会议，只能用学校和工作账号登录进行创建，自己创建的自己组织所有子账户无需管理员授权即可登录。&lt;br&gt;
+&lt;s&gt;&lt;strong&gt;但他人管理员账号登录即可授权，但他人子账号登录，需要其管理员对子账号进行授权，跳转本文第7小节，设置管理员授权。&lt;/strong&gt;&lt;/s&gt; 现在E5开发者订阅下创建的应用只能自己组织内25个账号登录，个人和学校，其他组织都无法登录。&lt;/p&gt;
+&lt;p&gt;-（5）具体设置参照官方项目说明，根据自己测试添加，如果不清楚，请移步官方项目github库https://github.com/OfficeDev/msteams-app-lms-meetings 。&lt;/p&gt;
+&lt;h1 id=&#34;前期基础&#34;&gt;前期基础&lt;/h1&gt;
+&lt;p&gt;（1）参考 &lt;strong&gt;浅忆博客&lt;/strong&gt;：&lt;a href=&#34;https://blog.curlc.com/archives/599.html&#34;&gt;新版可续签的Office 365开发者试用订阅！E5(附自动续订的方法)&lt;/a&gt;。申请office 365 开发者订阅。&lt;/p&gt;
+&lt;p&gt;（2）参考 &lt;strong&gt;啊哈程序&lt;/strong&gt;：[Github Page---- 搭建个人博客] 网址：blog.csdn.net/yuexianchang/article/details/53431703 (手动复制到浏览器）。&lt;/p&gt;
+&lt;h1 id=&#34;可选的三种部署路线&#34;&gt;可选的三种部署路线&lt;/h1&gt;
+&lt;h2 id=&#34;1githubhttpsrendercom-或httpsvercelcom或httpsnetlifycom简单可在线拉取官方更新升级自动构建部署&#34;&gt;（1）github+https://render.com 或https://vercel.com/或https://netlify.com（简单，可在线拉取官方更新,升级，自动构建部署）。&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;github拉取officedev官方码，修改成自己授权的ID，在线编译部署网页&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;a、 注册&lt;a href=&#34;https://github.com/&#34;&gt;github&lt;/a&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;b、 拉取(页面右上角Fork)官方源代码，网址为：https://github.com/OfficeDev/msteams-app-lms-meetings  ，修改成自己授权应用ID（按下文创建应用，获得应用ID）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;c、 用自己github账号注册部署站点 https://render.com 或https://vercel.com/或https://netlify.com&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;d、 在部署站点中，选择自己修改好的，自动识别参数，直接网页最后确认，即可部署网页。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2githubgithub-page最简单需本地编译官方更新替换静态文件升级&#34;&gt;（2）github+github page（最简单，需本地编译官方更新，替换静态文件升级）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;github拉取(页面右上角Fork)博主编上传的编译好的网页文件，在github修改成自己授权的应用ID，用github page部署静态网页。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;a、 注册&lt;a href=&#34;https://github.com/&#34;&gt;github&lt;/a&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;b、 拉取博主编译好的静态网页的存储库，网址为：&lt;a href=&#34;https://github.com/aiyou9/teamAPI&#34;&gt;https://github.com/aiyou9/teamAPI&lt;/a&gt;，按照说明，修改成自己授权应用ID；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;c、 在Settings中修改库名为：自己github用户名.github.io。然后自动就部署成网页，访问网址为：https://自己github用户名.github.io；（本地访问可用fastgithub 参见https://navdoc.super.site/1-preparation）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3自有空间域名部署需本地编译官方更新替换静态文件升级&#34;&gt;（3）自有空间域名部署（需本地编译官方更新，替换静态文件升级）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;要在自己空间、和https连接的域名下部署，可下载编译好的网页静态文件，修改成自己授权的应用ID，自行部署&lt;/strong&gt;&lt;br&gt;
+（2020/10/31更新，推荐&lt;a href=&#34;https://vercel.com/&#34;&gt;https://vercel.com/&lt;/a&gt;，提供免费空间，和https访问，可直接用github账户登录，拉取我的github账户中的静态文件，直接部署。）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;a、 注册&lt;a href=&#34;https://github.com/&#34;&gt;github&lt;/a&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;b、 下载网址为：&lt;a href=&#34;https://github.com/aiyou9/teamAPI&#34;&gt;https://github.com/aiyou9/teamAPI&lt;/a&gt;，点击绿色下载按钮，下载zip；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;c、 上传到自有空间，按照说明，修改成自己授权应用ID，即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;首先创建应用及授权&#34;&gt;首先创建应用及授权&lt;/h1&gt;
+&lt;p&gt;参考原官方项目说明，网址为：github.com/OfficeDev/msteams-app-lms-meetings (手动复制到浏览器）&lt;/p&gt;
+&lt;p&gt;个人设置截图如下：（2020/10/31开始更新，微软重构了Azure portal的界面，有点不一样了，后面有空再更新，之前无法设置组织内用户添加组织外应用，现在上线啦，感觉我的这个方法可能更有前途，多找一些人，使用自己上线的这team中转应用，其实就是个官方示例的开始界面《手动捂脸》）&lt;/p&gt;
+&lt;p&gt;-（1）在 &lt;a href=&#34;https://portal.azure.com/&#34;&gt;Azure portal&lt;/a&gt; 注册应用并授权API&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587086835316.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a、 起名，授权登录用户类型（此用户类型选择好后，以后不能改，微软个人账号只能登录，无法创建会议，推荐选2供自己组织和其他组织使用，方便找其他人登录调用）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2022年1月3日更新，只能选择组织内了，E5开发者订阅创建的应用，只能自己组织内部的25个账号登录访问&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;，跳转地址Redirect URIs填 https://localhost:3000/（http后s最好加）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587086887866.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;b、如下图，填4个地方：1、Redirect URIs中填https://localhost:3000/（http后s最好加，上一步已填好）；2、Redirect URIs再点击 add URL填上自己要部署https网址，如我的https://teamstudy.onrender.com/（这里网址可不断添加自己在不同空间部署成功的的网址，实现多方部署，但都必须是有ssl认证的https连接）例如，还部署在了githubpage，就继续增加github page的网址：https://&amp;lt;自己用户名&amp;gt;.github.io，3、Logout URL填 https://localhost:3000/（http后必须加s），4、勾选隐式授权access token，ID token。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587086915551.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+源代码中有退出跳转网址路径&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087829180.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;c、复制应用ID，待用，进入API授权设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587086943633.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;d、设置用户调用api，搜索online，选择readwrite权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087016393.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;e、根据个人使用账户权限，可能要管理员授权使用该API，可以在右上角切换管理员账户，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087033373.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;f、点击进行管理员授权&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087047023.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+-（额外提示）一个ID可以对应多个自己部署的https:域名，在web （经群友&lt;strong&gt;别恋&lt;/strong&gt;验证）&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087067227.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;网页部署&#34;&gt;网页部署&lt;/h1&gt;
+&lt;h2 id=&#34;1githubrender在线编译部署&#34;&gt;（1）github+render在线编译部署&lt;/h2&gt;
+&lt;p&gt;2022年1月3日更新：render网站改版，可以直接选web service，使用nodejs命令，yarn build&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1641164513323.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a、 拉取官方项目库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087158259.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;b、 找到文件，点击修改， 修改成自己的应用ID&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587095993662.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087385884.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;c、 用拉取的github账号登录render, 创建web空间，选择修改好应用ID的自己github库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087523215.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087458844.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;d、 自动识别项目，填写名称，该名称就是给出网址的二级域名，其他无需更改，直接点击确认。&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587096508631.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;e、部署成功后，就给出访问网址，填写到之前应用授权处。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087616891.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;2githubgithub-page部署&#34;&gt;（2）github+github Page部署&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a、拉取博主github上传编译好的网页文件：网址为：github.com/setdiaoyong/setdiaoyong.github.io (手动复制到浏览器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087673518.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;b、在github网页中打开static\js，分别搜索main.b09a1c35.chunk.js和main.b09a1c35.chunk.js.map ，打开后，点击右上角笔图标，进行编辑，分别搜索 {授权appID} ，将 {授权appID}  连 {}挂号 一起替换成至自己设置好的app ID&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087271380.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;c、修改库名为：自己github用户名.github.io&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087703757.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;d、修改好，滚动本页到下方，可以看到，访问地址，即可访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087873568.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;##（3）自由空间域名部署及设置参照github page部署方法&lt;/p&gt;
+&lt;h1 id=&#34;访问网页&#34;&gt;访问网页&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;a、在浏览器隐私模式中（防止自动登录影响），访问部署成功的网址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087924283.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;b、登录账户，不报错，不闪退，跳转进入如下界面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587087952044.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;c、创建一个meeting，此次省略截图，完成调用，也继续可跳转到web端的team视频会议软件体验一下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;16&#34;&gt;&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587088091091.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;问题解决&#34;&gt;问题解决&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;a、关键是授权设置，注意用设置登录类型范围内的账户登录，&lt;/li&gt;
+&lt;li&gt;b、如果登录报错，要看具体错误类型，再回去修改授权，未设置好Redirect URIs，会提示Redirect URIs不符合&lt;/li&gt;
+&lt;li&gt;c、如果登录闪退，隐式授权access token 和ID token 未勾选&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注：感谢浅忆博客-E5技术交流群的群友：&lt;strong&gt;别恋&lt;/strong&gt;，&lt;strong&gt;流浪&lt;/strong&gt; 提供了反馈。&lt;/p&gt;
+&lt;h1 id=&#34;邀请他人注册调用的授权设置官方已对e5开发者订阅完全限制只能组织内子账号调用部署的应用&#34;&gt;邀请他人注册调用的授权设置（官方已对E5开发者订阅完全限制，只能组织内子账号调用部署的应用）&lt;/h1&gt;
+&lt;h2 id=&#34;1管理员中心设置允许非管理员用户添加官方已上线&#34;&gt;1.管理员中心设置允许非管理员用户添加（官方已上线）&lt;/h2&gt;
+&lt;p&gt;&lt;s&gt;（官方preview）&lt;br&gt;
+官方还在开发，设置后无法保存。&lt;/s&gt;~~&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587295592959.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;~~&lt;br&gt;
+2020/10/31更新&lt;br&gt;
+官方已上线了🏳️‍🌈🏳️‍🌈🏳️‍🌈&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1604075825809.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2管理员登录特定网址授权本节作废官方提供后台页面设置选项了&#34;&gt;&lt;s&gt;2.管理员登录特定网址授权（本节作废，官方提供后台页面设置选项了）&lt;/s&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;a、子账号登录他人部署的应用，会报出需要管理员授权&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587091316482.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;s&gt;- b、可以从要登录应用跳转的微软sigin in界面复制网址来提取登录应用id和redirect_uri：&lt;/s&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587086688972.png&#34; alt=&#34;提取信息&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;c、将提取的应用id和redirect_uri替换以下网址的部分：login.microsoftonline.com/common/adminconsent?client_id=要登录的应用ID&amp;amp;redirect_uri=要登录应用的跳转地址&lt;/s&gt;&lt;br&gt;
+&lt;s&gt;- d、 将替换好的网址复制到浏览器 .&lt;/s&gt;&lt;br&gt;
+参见&lt;a href=&#34;https://docs.microsoft.com/zh-CN/microsoft-365/admin/add-users/about-admin-roles?WT.mc_id=365AdminCSH&amp;amp;view=o365-worldwide&#34;&gt;官方文档1&lt;/a&gt;，&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant&#34; title=&#34;官方文档2&#34;&gt;官方文档2&lt;/a&gt;、&lt;a href=&#34;https://docs.microsoft.com/zh-cn/graph/permissions-reference&#34; title=&#34;官方文档3&#34;&gt;官方文档3&lt;/a&gt;、&lt;a href=&#34;https://docs.microsoft.com/zh-cn/graph/auth-cloudsolutionprovider&#34; title=&#34;官方文档4*&#34;&gt;官方文档4*&lt;/a&gt;&lt;br&gt;
+&lt;s&gt;- e、修改好，用管理员账号登录，接受应用需要的授权，然后在azure中修改：&lt;/s&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587092151066.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;f、打开组织应用&lt;/s&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587092143391.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;g、打开所有应用，搜索之前记录的他人应用名&lt;/s&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587092163163.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;h、以自己部署的为例，需要更换为在所有应用中搜索，我部署的应用名为teamstudy。&lt;/s&gt;&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587092135736.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;~~ i、点击添加用户，此处已有的一个用户为管理员~~&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587092113693.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;~~ j、添加允许登录的子账号~~&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587092106702.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;~~ k、删除管理员授权，保证安全~~&lt;br&gt;
+&lt;img src=&#34;https://blog.xbreeding.com/post-images/1587092099707.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;未来计划&#34;&gt;未来计划&lt;/h1&gt;
+&lt;p&gt;&lt;s&gt;&lt;strong&gt;（1）周期性定时邮件及本地客户端自动回复维持子账号电子邮件活跃度，可能没有权重&lt;/strong&gt;&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;&lt;strong&gt;（2）已检测，官方可能已忽略，不会识别为用户活跃——微软自动化工作流软件Power Automate提高子账号活跃度。&lt;a href=&#34;https://docs.microsoft.com/zh-cn/learn/modules/get-started-flows/&#34;&gt;参考官方学习文档&lt;/a&gt;。&lt;/strong&gt;&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;&lt;strong&gt;（3）网上有提到，绑定自己的域名，有可能更容易保活&lt;/strong&gt;&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（4）待实施部署的网址，使用edge，chrome浏览器，登录账号，安装automa插件，设置自动化流程，进行会议的创建&lt;/strong&gt;😘&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;续订随缘&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;赞赏支持作者&#34;&gt;赞赏，支持作者&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;如果觉得本文对您有所帮助，请点击￥赞赏￥按钮，为作者原创加油鼓励&lt;/strong&gt;&lt;/p&gt;
+">Office 365 team 官方示例代码的套壳开发，活跃绑定E5的github及自动化部署调用</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 200
+    });
+  </script>
+
+
+
+<script src="/media/js/mouse/love.js"></script>
+
+
+
+
+
+</html>

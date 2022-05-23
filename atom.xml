@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog.xbreeding.com</id>
+    <title>凤梧山居</title>
+    <updated>2022-05-23T16:00:45.889Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blog.xbreeding.com"/>
+    <link rel="self" href="https://blog.xbreeding.com/atom.xml"/>
+    <subtitle>大隐于市者，能</subtitle>
+    <logo>https://blog.xbreeding.com/images/avatar.png</logo>
+    <icon>https://blog.xbreeding.com/favicon.ico</icon>
+    <rights>All rights reserved 2022, 凤梧山居</rights>
+    <entry>
+        <title type="html"><![CDATA[alwaysdata部署企业级发卡站]]></title>
+        <id>https://blog.xbreeding.com/ifpea5ocF/</id>
+        <link href="https://blog.xbreeding.com/ifpea5ocF/">
+        </link>
+        <updated>2022-02-18T20:24:21.000Z</updated>
+        <summary type="html"><![CDATA[<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "02edb4b1101a4149aa573f04e2d042fe"}'></script><!-- End Cloudflare Web Analytics -->
+<p>多方寻找和测试，终于找到能部署到alwaysdata的发卡站了。<br>
+发卡站部署代码来自<a href="https://www.ccooc.cn/555.html#cmt3226">曹操博客</a><br>
+代码总大小为94mb，要先在alwaysdata，创建一个新账号。</p>
+]]></summary>
+        <content type="html"><![CDATA[<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "02edb4b1101a4149aa573f04e2d042fe"}'></script><!-- End Cloudflare Web Analytics -->
+<p>多方寻找和测试，终于找到能部署到alwaysdata的发卡站了。<br>
+发卡站部署代码来自<a href="https://www.ccooc.cn/555.html#cmt3226">曹操博客</a><br>
+代码总大小为94mb，要先在alwaysdata，创建一个新账号。</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://blog.xbreeding.com/post-images/1645217563112.png" alt="" loading="lazy"></figure>
+<h1 id="1-开始搭建">1 开始搭建</h1>
+<h2 id="1-下载并上传代码">1  下载并上传代码</h2>
+<p>从<a href="https://www.ccooc.cn/555.html#cmt3226">曹操博客</a>下载源码，使用MobaXterm或Xftp（推荐，有失败记录，可续传），<a href="https://blog.xbreeding.com/qfX1_b_ai/#windows%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85mobaxterm%E5%B9%B6%E7%99%BB%E5%BD%95ssh%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C">可参考之前的教程</a>，上传代码压缩包，然后在ssh后台，<a href="https://blog.xbreeding.com/qfX1_b_ai/#%E4%BB%A5%E4%B8%8B%E4%BB%A3%E7%A0%81%E9%80%90%E8%A1%8C%E5%A4%8D%E5%88%B6%E5%88%B0mobaxterm-ssh%E7%95%8C%E9%9D%A2%E5%9B%9E%E8%BD%A6%E8%BF%90%E8%A1%8C">可参考之前的教程</a>，解压</p>
+<p>参考代码如下：</p>
+<p><code> cd www</code><br>
+<code>mkdir shop ,</code><br>
+<code>cd shop,</code><br>
+<code>unzip 你自己的文件名.zip,</code></p>
+<figure data-type="image" tabindex="2"><img src="https://blog.xbreeding.com/post-images/1645220229743.png" alt="" loading="lazy"></figure>
+<p>解压完，如下图所示：<br>
+<img src="https://blog.xbreeding.com/post-images/1645220299198.png" alt="" loading="lazy"><br>
+解压后，要删除压缩包，不然会超过100mb。</p>
+<h2 id="2-创建数据库">2 创建数据库</h2>
+<p>登录alwaysdata后台，在mySQL中，添加数据库<br>
+<img src="https://blog.xbreeding.com/post-images/1645220404224.png" alt="" loading="lazy"><br>
+设置数据库用户密码（数据库用户名太长，alwaysdata自动改设为数字）<br>
+<img src="https://blog.xbreeding.com/post-images/1645220445633.png" alt="" loading="lazy"><br>
+<img src="https://blog.xbreeding.com/post-images/1645220505975.png" alt="" loading="lazy"><br>
+记录这些信息，后面需要填写。<br>
+如果之前搭建过网站，现在要删除数据库里面的以前内容</p>
+<h2 id="3-导入数据库文件">3 导入数据库文件</h2>
+<p>点击之前图中的数据库管理软件按钮，跳转数据库管理软件<br>
+点击创建的数据库，然后点击import，打开本地的payeco.hl-5.com.sql文件，导入数据库<br>
+<img src="https://blog.xbreeding.com/post-images/1645221638196.png" alt="" loading="lazy"><br>
+<img src="https://blog.xbreeding.com/post-images/1645221645978.png" alt="" loading="lazy"></p>
+<h2 id="4-修改数据库信息地址">4 修改数据库信息地址：</h2>
+<p>在application/database.php文件中，填写数据库信息的文件（请勿用windows记事本，文本文档编辑代码文件，推荐VScode）<br>
+<img src="https://blog.xbreeding.com/post-images/1645222399207.png" alt="" loading="lazy"></p>
+<pre><code>// 服务器地址
+'hostname'        =&gt; '数据库链接地址',
+// 数据库名
+'database'        =&gt; '数据库名',
+// 数据库用户名
+'username'        =&gt; '自己的数据库用户名',
+// 数据库密码
+'password'        =&gt; '自己设的密码',
+// 数据库连接端口
+'hostport'        =&gt; '3306',
+</code></pre>
+<h2 id="5-alwaysdata后台配置网站">5 alwaysdata后台配置网站</h2>
+<p>进入后台网页设置界面<br>
+<img src="https://blog.xbreeding.com/post-images/1645222705995.png" alt="" loading="lazy"><br>
+填写网站源代码在服务的地址，并选择PHP版本，推荐7.0<br>
+<img src="https://blog.xbreeding.com/post-images/1645260006182.png" alt="" loading="lazy"></p>
+<h2 id="6-刷新网站并访问发卡站后台">6 刷新网站，并访问发卡站后台</h2>
+<p><img src="https://blog.xbreeding.com/post-images/1645223182341.png" alt="" loading="lazy"><br>
+<img src="https://blog.xbreeding.com/post-images/1645235754296.png" alt="" loading="lazy"><br>
+在网址后添加/admin<br>
+账号：admin    密码：admin<br>
+<img src="https://blog.xbreeding.com/post-images/1645235797879.png" alt="" loading="lazy"></p>
+<h2 id="7-更换自己的域名">7 更换自己的域名</h2>
+<p><strong>《注意域名不要带后缀/》</strong><br>
+<img src="https://blog.xbreeding.com/post-images/1645260028444.png" alt="" loading="lazy"></p>
+<h2 id="8-绑定支付方式">8 绑定支付方式</h2>
+<p>具体使用，待续</p>
+<h2 id="9-注册账号测试支付">9 注册账号测试支付</h2>
+<p>进入首页，注册一个商家账号，就可以进行上架商品了，具体使用，待续</p>
+<h1 id="10-赞赏支持作者">10 赞赏，支持作者</h1>
+<p><strong>如果觉得本文对您有所帮助，请点击￥赞赏￥按钮，为作者原创加油鼓劲</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[适配大屏，快速浏览的多主题nav3.cn开源导航站的部署与使用文档]]></title>
+        <id>https://blog.xbreeding.com/KLaVVy-2Q/</id>
+        <link href="https://blog.xbreeding.com/KLaVVy-2Q/">
+        </link>
+        <updated>2022-01-01T18:38:39.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="nav-doc"><a href="https://navdoc.super.site">Nav Doc</a></h1>
+<p>自建nav3.cn部署与使用文档地址: <a href="https://navdoc.super.site">https://navdoc.super.site</a></p>
+<p><strong><a href="https://jq.qq.com/?_wv=1027&amp;k=eVKGeWqt">感兴趣，点击链接加入qq群聊【Nav导航部署使用】</a></strong></p>
+<p><strong>E5开发者订阅可绑定github，增加续期权重，但平时不用github开发，可以使用Nav3.cn，建个导航站，浏览器直接添加网址，提交后，即可产生github提交记录，活跃一下github，但续订随缘</strong></p>
+<h1 id="官方示例网站">官方示例网站：</h1>
+<p><a href="https://www.nav3.cn/#/side?q=&amp;id=0&amp;page=0">发现导航 - 精选实用导航网站</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="nav-doc"><a href="https://navdoc.super.site">Nav Doc</a></h1>
+<p>自建nav3.cn部署与使用文档地址: <a href="https://navdoc.super.site">https://navdoc.super.site</a></p>
+<p><strong><a href="https://jq.qq.com/?_wv=1027&amp;k=eVKGeWqt">感兴趣，点击链接加入qq群聊【Nav导航部署使用】</a></strong></p>
+<p><strong>E5开发者订阅可绑定github，增加续期权重，但平时不用github开发，可以使用Nav3.cn，建个导航站，浏览器直接添加网址，提交后，即可产生github提交记录，活跃一下github，但续订随缘</strong></p>
+<h1 id="官方示例网站">官方示例网站：</h1>
+<p><a href="https://www.nav3.cn/#/side?q=&amp;id=0&amp;page=0">发现导航 - 精选实用导航网站</a></p>
+<!-- more -->
+<h1 id="项目源代码库">项目源代码库</h1>
+<p><a href="https://github.com/xjh22222228/nav">GitHub - xjh22222228/nav: 🔍 发现导航 , 打造最强静态导航网站(支持SEO) | Discovery Navigation: A purely static, powerful navigation website that supports SEO and online editing</a></p>
+<p>⏰ 本项目当前主要思路，是以github为服务器后台，进行数据持久化存储，以github webAPI提交自己部署导航站的更改到github代码库，在github page，vercel，netlify等自动化部署网站，监控github代码库的提交，进行导航站静态文件的构建，这中间需要对提交的更改，重新构建大约10min左右，才能看到每次修改后的导航站。</p>
+<p>📢 推荐部署方式：项目正在不断优化中，为了快速尝试一些新特性，以及本地优化，或二次开发，方便为项目贡献代码，推荐github fork后，复制main，创建新分支mynav，在mynav分支中，修改配置，然后进行多方部署。<br>
+<img src="https://sharepan.epizy.com/images/2022/01/02/3NcRjAZoCA/avatar.png" alt="ssss" loading="lazy"><br>
+<strong>推荐side主题，标题后有快速展开合并按钮，可适配大屏显示器，快速浏览。</strong></p>
+<!-- more -->
+<h1 id="点击以下标题即可进入nav-doc文档详细内容"><strong>点击以下标题即可进入Nav Doc文档详细内容：</strong></h1>
+<h1 id="1-前期准备"><a href="https://navdoc.super.site/1-preparation">1. 前期准备</a></h1>
+<h1 id="2-创建github账号"><a href="https://navdoc.super.site/2-register-github">2. 创建github账号</a></h1>
+<h1 id="3-在github-fork项目"><a href="https://navdoc.super.site/3-github-fork">3. 在github fork项目</a></h1>
+<h1 id="4-拉取创建mynav分支可选步骤"><a href="https://navdoc.super.site/4-creat-mynav">4. 拉取，创建mynav分支(可选步骤)</a></h1>
+<h1 id="5"><a href="https://navdoc.super.site/5-change-branch">5. <strong>修改github默认分支（可选步骤）</strong></a></h1>
+<h1 id="6-修改mynav分支中的navconfigts"><a href="https://navdoc.super.site/6-edit-nav-config-ts">6. 修改mynav分支中的nav.config.ts</a></h1>
+<h1 id="7-部署"><a href="https://navdoc.super.site/7-deployment">7. 部署</a></h1>
+<h1 id="8-使用说明"><a href="https://navdoc.super.site/8-using-instruction">8. 使用说明</a></h1>
+<h1 id="9-使用技巧"><a href="https://navdoc.super.site/9-using-skills">9、使用技巧</a></h1>
+<h1 id="10-更新项目"><a href="https://navdoc.super.site/910-update">10. 更新项目</a></h1>
+<h1 id="11"><a href="https://navdoc.super.site/911-navshow">11. <strong>优秀站点展示</strong></a></h1>
+<h1 id="感兴趣可以加qq群聊">感兴趣可以加qq群聊</h1>
+<p><img src="https://blog.xbreeding.com/post-images/1641076240322.png" alt="" loading="lazy"><br>
+或者点击加群快速链接<br>
+<a href="https://qm.qq.com/cgi-bin/qm/qr?k=m5Bt2uMgUM-8xo7VJPa_i7hWQFjCda3M&amp;jump_from=webapi">Nav导航部署使用</a></p>
+<h1 id="赞赏支持作者">赞赏，支持作者</h1>
+<p><strong>如果觉得本文对您有所帮助，请点击<em>￥赞赏￥</em>按钮，为作者原创加油鼓劲</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[无验证的alwaysdata部署go版的cloudreve云盘程序，直链微软SP、OD]]></title>
+        <id>https://blog.xbreeding.com/qfX1_b_ai/</id>
+        <link href="https://blog.xbreeding.com/qfX1_b_ai/">
+        </link>
+        <updated>2021-12-22T15:01:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>先阅读上一篇<a href="https://blog.xbreeding.com/nKOi9H1cL/">《无验证的100mb 免费全能空间alwaysdata的注册与配置免费二级域名ssl》</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>先阅读上一篇<a href="https://blog.xbreeding.com/nKOi9H1cL/">《无验证的100mb 免费全能空间alwaysdata的注册与配置免费二级域名ssl》</a></p>
+<!-- more -->
+<p><strong>重要提醒：</strong><br>
+<strong>1、在alwaysdata中使用cloudreve，在管理员面板中修改保存后，有可能需要在alwaysdata后台页面中，点刷新按钮，重启cloudreve，才能生效，不过感觉有延迟，要等一段时间后alwaysdata的CDN刷新出来吧，可以自行绑定cloudflare CDN</strong><br>
+<strong>2、Cloudreve最好不要设置验证码，邮箱等，一旦对域名使用自行配置的CDN，没有配置好，会加载不出来验证码，来自浅忆博客-E5技术交流群的群友：<em>沉吟</em></strong></p>
+<p><a href="https://jq.qq.com/?_wv=1027&amp;k=52yJp9C">点击此加入群聊【E5技术交流群】</a></p>
+<h1 id="cloudreve简介">cloudreve简介</h1>
+<p>cloudreve项目主页：<a href="http://cloudreve.org/">http://cloudreve.org/</a><br>
+cloudreve源代码地址：<a href="https://github.com/cloudreve/Cloudreve/releases">https://github.com/cloudreve/Cloudreve/releases</a><br>
+特点：<br>
+<img src="https://blog.xbreeding.com/post-images/1640185471271.jpg" alt="" loading="lazy"><br>
+cloudreve文档<br>
+<a href="https://docs.cloudreve.org/">https://docs.cloudreve.org/</a></p>
+<h1 id="github访问加速">github访问加速</h1>
+<h2 id="fastgithub">fastgithub</h2>
+<p>下载地址：<br>
+<a href="https://github.com/dotnetcore/fastgithub/releases">https://github.com/dotnetcore/fastgithub/releases</a></p>
+<p>fastgithub release 2.1.2（2021年11月29日）备用下载链接：<br>
+<a href="https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/4b52a895-d1ab-401a-977b-08060ac58fa8.zip">fastgithub_win-x64.zip</a><br>
+<a href="https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/8104f604-3224-41a5-948a-4848994c132f.zip">fastgithub_linux-arm64.zip</a><br>
+<a href="https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/6a270591-7d38-43c1-9c4f-ec54f542c7f7.zip">fastgithub_linux-arm64.zip</a><br>
+<a href="https://super-static-assets.s3.amazonaws.com/c33c9b6f-dab3-410d-9fa7-04391ab037ab/files/d17d3aa6-b16f-4345-bd1e-73fd1612b7b5.zip">fastgithub_osx-x64.zip</a></p>
+<h1 id="设置alwaysdata的ssh使用密码登录">设置alwaysdata的ssh使用密码登录</h1>
+<p><img src="https://blog.xbreeding.com/post-images/1640148898998.jpg" alt="设置ssh使用密码登录" loading="lazy"><br>
+<img src="https://blog.xbreeding.com/post-images/1640149008826.jpg" alt="勾选使用密码登录，提交" loading="lazy"></p>
+<h1 id="windows本地安装mobaxterm并登录ssh进行操作">windows本地安装mobaxterm，并登录ssh，进行操作</h1>
+<p>其他ssh工具也一样，mobaxterm集成了FTP，ssh比较方便，免费版就够用<br>
+<a href="https://mobaxterm.mobatek.net/download-home-edition.html">官方免费版</a><br>
+如果不在意泄漏密码，可以用中文优化版<br>
+下载地址: <a href="https://xpan.cf/s/OEHB">https://xpan.cf/s/OEHB</a> 密码：moba<br>
+<img src="https://blog.xbreeding.com/post-images/1640150882948.jpg" alt="mobaxterm登录ssh" loading="lazy"><br>
+输入ssh密码<br>
+<img src="https://blog.xbreeding.com/post-images/1640151035550.jpg" alt="输入ssh密码" loading="lazy"><br>
+<img src="https://blog.xbreeding.com/post-images/1640151142754.jpg" alt="mobaxterm界面" loading="lazy"><br>
+<a name="anchor"></a></p>
+<h1 id="下载-解压-运行cloudreve">下载、解压、运行cloudreve</h1>
+<h2 id="先到cloudreve官网软件发布页复制最新版的amd64位软件的下载链接替换下文wget命令后面链接">先到<a href="">cloudreve官网软件发布页</a>，复制最新版的amd64位软件的下载链接，替换下文wget命令后面链接。</h2>
+<p><strong>（mobaxterm的ssh中粘贴命令，需要使用鼠标右键菜单，选择粘贴）</strong><br>
+<img src="https://blog.xbreeding.com/post-images/1640187913975.jpg" alt="" loading="lazy"><br>
+2021年12月22日 为3.4.2版本</p>
+<h2 id="以下代码逐行复制到mobaxterm-ssh界面回车运行">以下代码逐行复制到mobaxterm ssh界面，回车运行</h2>
+<p><code>mkdir myapp </code><br>
+<code>ls</code><br>
+<code>cd myapp</code><br>
+<code>wget https://github.com/cloudreve/Cloudreve/releases/download/3.4.2/cloudreve_3.4.2_linux_amd64.tar.gz</code></p>
+<figure data-type="image" tabindex="1"><img src="https://blog.xbreeding.com/post-images/1640188562543.jpg" alt="" loading="lazy"></figure>
+<h2 id="在ftp窗口刷新目录后就能看到myapp文件夹点进入可看到下载的压缩包">在ftp窗口，刷新目录后，就能看到myapp文件夹，点进入，可看到下载的压缩包</h2>
+<p><img src="https://blog.xbreeding.com/post-images/1640188668445.jpg" alt="" loading="lazy"><br>
+<img src="https://blog.xbreeding.com/post-images/1640188762916.jpg" alt="" loading="lazy"></p>
+<h2 id="继续ssh命令行执行解压缩命令">继续ssh命令行，执行解压缩命令</h2>
+<p><code>tar -zxvf cloudreve_3.4.2_linux_amd64.tar.gz</code><br>
+<img src="https://blog.xbreeding.com/post-images/1640189013953.jpg" alt="" loading="lazy"></p>
+<h2 id="获取cloudreve运行权限">获取cloudreve运行权限</h2>
+<p><code>chmod +x ./cloudreve</code></p>
+<h2 id="然后执行运行命令并点击按钮刷新目录">然后执行运行命令，并点击按钮，刷新目录</h2>
+<p><code>./cloudreve</code><br>
+此时产生两个新的文件<br>
+conf.ini  为配置文件<br>
+cloudreve.db 为数据库文件</p>
+<p>以及给出初始管理员账号与密码</p>
+<p>[Info]    2021-12-22 16:06:20 初始管理员账号：admin@cloudreve.org<br>
+[Info]    2021-12-22 16:06:20 初始管理员密码：KhfQNgLG<br>
+（密码应该是随机的，根据自己的来填写，登录）<br>
+<img src="https://blog.xbreeding.com/post-images/1640189599677.jpg" alt="" loading="lazy"></p>
+<h2 id="高级备选方案提前查好域名在alwaysdata的port端口号-以提前编写好的confini文件运行cloudreve">（高级备选方案）提前查好<a href="#%E6%9F%A5%E8%AF%A2%E5%9F%9F%E5%90%8D%E5%9C%A8alwaysdata%E7%9A%84%E5%BC%80%E6%94%BEweb%E8%AE%BF%E9%97%AE%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%8F%B7">域名在alwaysdata的port端口号</a> 以提前编写好的conf.ini文件，运行cloudreve</h2>
+<p>根据<a href="https://docs.cloudreve.org/getting-started/config">cloudreve文档</a>，提前配置好相关设置，如监听端口port，mysql等数据库（提前在alwaysdata设置）</p>
+<p>然后在启动时加入-c参数指定配置文件路径：</p>
+<p><code>./cloudreve -c home/hotnav/myapp/conf.ini</code></p>
+<h2 id="查询域名在alwaysdata的开放web访问的端口号">查询域名在alwaysdata的开放web访问的端口号，</h2>
+<p>alwaysdata默认免费二级域名的端口号为8100<br>
+绑定自己的域名，端口号从8101开始向后排<br>
+<strong>查看当前域名的端口号方法：</strong><br>
+1、在页面中，点击域名后的编辑按钮<br>
+<img src="https://blog.xbreeding.com/post-images/1640248947068.jpg" alt="" loading="lazy"><br>
+2、在表面配置中选择type为你需要部署程序对应的语言，查看（有的静态语言不需要端口，如PHP，就选择user program）<br>
+<img src="https://blog.xbreeding.com/post-images/1640249156230.jpg" alt="" loading="lazy"></p>
+<h2 id="右击confini-在mobaxterm默认编辑器打开-修改5212为部署域名在alwaysdata的开放web访问的端口免费提供的二级域名默认为8100并保存windows操作如果会linux命令在ssh用代码修改">右击conf.ini 在mobaxterm默认编辑器打开 修改5212为部署域名在alwaysdata的开放web访问的端口，免费提供的二级域名默认为8100，并保存（windows操作，如果会linux命令，在ssh用代码修改）</h2>
+<figure data-type="image" tabindex="2"><img src="https://blog.xbreeding.com/post-images/1640190448765.jpg" alt="" loading="lazy"></figure>
+<p><strong>Fix：有时后台端口5212会被占用，显示错误，未在db中写入初始管理员登录账号，就需要把cloudreve.db文件删除，在conf.ini 修改好端口后，再次运行cloudreve，重新创建db，即可</strong><br>
+<img src="https://blog.xbreeding.com/post-images/1640189740747.jpg" alt="" loading="lazy"></p>
+<h2 id="点击ssh界面使用ctrl-c-回到命令行再次输入cloudreve运行">点击ssh界面，使用ctrl + c 回到命令行，再次输入./cloudreve，运行。</h2>
+<figure data-type="image" tabindex="3"><img src="https://blog.xbreeding.com/post-images/1640190646837.jpg" alt="" loading="lazy"></figure>
+<h2 id="使用ctrl-c-退出进程进入alwaysdata网页后台配置">使用ctrl + c 退出进程，进入alwaysdata网页后台配置。</h2>
+<figure data-type="image" tabindex="4"><img src="https://blog.xbreeding.com/post-images/1640190928461.jpg" alt="" loading="lazy"></figure>
+<h2 id="选择user-program-在对应框中输入~myappcloudreve-输入myapp">选择user program， 在对应框中输入~/myapp/cloudreve 输入myapp</h2>
+<figure data-type="image" tabindex="5"><img src="https://blog.xbreeding.com/post-images/1640191125056.jpg" alt="" loading="lazy"></figure>
+<h2 id="提交后回到页面点击重启按钮刷新网站">提交后，回到页面，点击重启按钮，刷新网站</h2>
+<figure data-type="image" tabindex="6"><img src="https://blog.xbreeding.com/post-images/1640191167382.jpg" alt="" loading="lazy"></figure>
+<h2 id="访问二级域名用ssh中初始管理员账号密码登录">访问二级域名，用ssh中初始管理员账号密码登录</h2>
+<figure data-type="image" tabindex="7"><img src="https://blog.xbreeding.com/post-images/1640191434657.jpg" alt="" loading="lazy"></figure>
+<h2 id="备份cloudreve的配置与数据文件">备份cloudreve的配置与数据文件</h2>
+<p>在最好隔一段时间备份一下，如果没有使用mysql等数据库，为db单文件，只要在ssh或FTP后台下载conf.ini  cloudreve.db到本地。</p>
+<h2 id="更新升级cloudreve软件">更新升级cloudreve软件</h2>
+<p>首先在 MobaXterm 或alwaysdata官方提供的webssh，登录linux后台，<br>
+参考本文之前小节——下载、解压、运行cloudreve#anchor<br>
+参考<a href="#%E4%B8%8B%E8%BD%BD%E8%A7%A3%E5%8E%8B%E8%BF%90%E8%A1%8Ccloudreve">下载、解压、运行cloudreve</a><br>
+<code>cd myapp</code><br>
+<code>wget https://github.com/cloudreve/Cloudreve/releases/download/3.4.2/cloudreve_3.4.2_linux_amd64.tar.gz</code><br>
+<code>tar -zxvf cloudreve_3.4.2_linux_amd64.tar.gz</code><br>
+<code>chmod +x ./cloudreve</code><br>
+<code>./cloudreve</code><br>
+如果你数据库采用了是sql单文件db形式，即cloudreve.db，此时虽然不会替换已经产生的conf.ini 和 cloudreve.db文件，但最好在升级前备份一下</p>
+<p>可以下载到本地，也可以用linux命令复制一份<br>
+<code>cd myapp</code><br>
+<code>cp conf.ini conf.ini.back</code><br>
+<code>cp cloudreve.db cloudreve.db.back</code></p>
+<h2 id="具体使用参照cloudreve文档httpsdocscloudreveorg">具体使用，参照cloudreve文档：<a href="https://docs.cloudreve.org/">https://docs.cloudreve.org/</a></h2>
+<h1 id="注意事项">注意事项</h1>
+<h2 id="1-不能在微软官方od或sp中删除cloudreve上传文件其文件名中前缀部分">1、不能在微软官方od或sp中，删除cloudreve上传文件，其文件名中前缀部分</h2>
+<p>cloudreve会对从cloudreve上传的文件，进行编号，加在文件名的前面，上传到云端sp或od，因此在微软官方的od和sp不要修改cloudreve上传文件名前的前缀。<br>
+<img src="https://blog.xbreeding.com/post-images/1640244769034.jpg" alt="" loading="lazy"></p>
+<h1 id="赞赏支持作者">赞赏，支持作者</h1>
+<p><strong>如果觉得本文对您有所帮助，请点击￥赞赏￥按钮，为作者原创加油鼓劲</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[无验证的100mb 免费全能空间alwaysdata的注册与配置免费二级域名ssl]]></title>
+        <id>https://blog.xbreeding.com/nKOi9H1cL/</id>
+        <link href="https://blog.xbreeding.com/nKOi9H1cL/">
+        </link>
+        <updated>2021-12-21T05:48:15.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="简介">简介</h1>
+<p>免费100mb全能空间，续期只要登录后台，即可，不活跃，会发邮件提醒你登录其后台。<br>
+<strong>有ssl，这样才能绑定微软的api</strong><br>
+<big><strong>后台有中文界面</strong></big></p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="简介">简介</h1>
+<p>免费100mb全能空间，续期只要登录后台，即可，不活跃，会发邮件提醒你登录其后台。<br>
+<strong>有ssl，这样才能绑定微软的api</strong><br>
+<big><strong>后台有中文界面</strong></big></p>
+<!-- more -->
+<p><img src="https://blog.xbreeding.com/post-images/1640145418662.jpg" alt="全部功能简介" loading="lazy"><br>
+<a href="https://help.alwaysdata.com/en/accounts/public-cloud-restrictions/#free-plan">免费计划的规则</a><br>
+<a href="https://help.alwaysdata.com/en/accounts/alerts-notifications/#lack-of-activity">免费计划不活跃，会发邮件提醒登录后台，登录后就不会暂停账户</a></p>
+<h1 id="alwaysdata主页">alwaysdata主页</h1>
+<p>https://www.alwaysdata.com/</p>
+<h1 id="修改语言为英文">修改语言为英文</h1>
+<p>网站当前支持<a href="https://www.alwaysdata.com/fr/">法语</a>与<a href="https://www.alwaysdata.com/en/">英语</a>，<br>
+<img src="https://blog.xbreeding.com/post-images/1640144399140.jpg" alt="切换语言" loading="lazy"><br>
+不过一般用浏览器翻译成中文，结合英文理解意思</p>
+<h1 id="选择免费订阅进入注册">选择免费订阅，进入注册</h1>
+<figure data-type="image" tabindex="1"><img src="https://blog.xbreeding.com/post-images/1640144438852.jpg" alt="选择免费订阅，进入注册" loading="lazy"></figure>
+<h1 id="最好关闭代理用原生ip地址才没有信用卡认证">最好关闭代理，用原生IP地址，才没有信用卡认证</h1>
+<p>可能高级的原生IP的代理，可以不被识别，如果出现要信用卡认证，请检查代理与IP<br>
+<img src="https://blog.xbreeding.com/post-images/1640144745927.jpg" alt="关闭代理，用原生IP地址，才没有信用卡认证" loading="lazy"></p>
+<p>关闭代理，用本地IP访问，刷新页面后，就没有信用卡认证了</p>
+<h1 id="填写注册信息">填写注册信息</h1>
+<p>不需要验证邮箱，email可以随便填，但是最好用境外的无个人信息的邮箱，方便接受，续期的，提醒你登录后台的提醒邮件<br>
+<img src="https://blog.xbreeding.com/post-images/1640144953654.jpg" alt="填写注册信息" loading="lazy"><br>
+继续继续填写相关信息<br>
+<img src="https://blog.xbreeding.com/post-images/1640148476223.jpg" alt="设置域名" loading="lazy"></p>
+<h1 id="修改后台语言为中文">修改后台语言为中文</h1>
+<figure data-type="image" tabindex="2"><img src="https://blog.xbreeding.com/post-images/1640148650818.jpg" alt="修改后台语言为中文" loading="lazy"></figure>
+<h1 id="设置免费二级域名的ssl证书">设置免费二级域名的ssl证书</h1>
+<p>免费给的二级域名，可以配置ssl，以前后台会显示过期，但是不会丢失https访问，现在只要在页面，站点设置，配置强制以https访问，就可以自动加上。<br>
+<img src="https://blog.xbreeding.com/post-images/1640184974878.jpg" alt="" loading="lazy"><br>
+<img src="https://blog.xbreeding.com/post-images/1640185039450.jpg" alt="" loading="lazy"><br>
+刷新站点<br>
+<img src="https://blog.xbreeding.com/post-images/1640185085924.jpg" alt="" loading="lazy"><br>
+成功https访问<br>
+<img src="https://blog.xbreeding.com/post-images/1640185166422.jpg" alt="" loading="lazy"></p>
+<h1 id="赞赏支持作者">赞赏，支持作者</h1>
+<p><strong>如果觉得本文对您有所帮助，请点击<em>￥赞赏￥</em>按钮，为作者原创加油鼓劲</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Office 365 team 官方示例代码的套壳开发，活跃绑定E5的github及自动化部署调用]]></title>
+        <id>https://blog.xbreeding.com/mYQjpWO-3/</id>
+        <link href="https://blog.xbreeding.com/mYQjpWO-3/">
+        </link>
+        <updated>2020-04-17T00:39:54.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>拜请诸方大佬，各显神通，有缘续订</strong><br>
+<strong>2020/10/31更新，喜讯：微软官方上线可设置非管理员的用户直接允许添加非组织开发的应用</strong><br>
+<strong>2020/12/17 更新，不好的消息：E5开发订阅开发软件，只支持自己组织账号登录</strong><br>
+<strong>正在研究：Office 365 team 官方示例代码上传绑定E5的github，并远程部署后，利用浏览器自动化插件调用自动化</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>拜请诸方大佬，各显神通，有缘续订</strong><br>
+<strong>2020/10/31更新，喜讯：微软官方上线可设置非管理员的用户直接允许添加非组织开发的应用</strong><br>
+<strong>2020/12/17 更新，不好的消息：E5开发订阅开发软件，只支持自己组织账号登录</strong><br>
+<strong>正在研究：Office 365 team 官方示例代码上传绑定E5的github，并远程部署后，利用浏览器自动化插件调用自动化</strong></p>
+<!-- more -->
+<p>E5开发者订阅，可绑定github账号，增加续期权重，如下图所示，因此本文在官方代码的基础，还是有一定价值的，毕竟在自己github库中开发微软的team应用了，公开的库，微软应该能检测到。<br>
+https://developer.microsoft.com/zh-cn/microsoft-365/profile/settings/accounts-linked<br>
+<img src="https://blog.xbreeding.com/post-images/1641165067253.jpg" alt="" loading="lazy"></p>
+<h1 id="特别致谢">特别致谢</h1>
+<p>-（1）感谢 <a href="https://blog.curlc.com/archives/687.html">浅忆博客</a></p>
+<p>-（2）感谢浅忆博客-E5技术交流群的群友：<strong>别恋</strong>，<strong>流浪</strong></p>
+<p><a href="https://jq.qq.com/?_wv=1027&amp;k=52yJp9C">点击此加入群聊【E5技术交流群】</a></p>
+<h1 id="成功示例">成功示例</h1>
+<p>-（1）如果继续开发，可用远程动态部署服务<br>
+提供商：<br>
+<a href="https://render.com">https://render.com</a><br>
+示例站点：<a href="https://teamstudy.onrender.com/">https://teamstudy.onrender.com/</a><br>
+<a href="https://vercel.com/">https://vercel.com/</a><br>
+<a href="https://netlify.com/">https://netlify.com/</a></p>
+<p>-（2）国内外免费空间，上传静态文件部署，例如免费空间，如<a href="https://epizy.com">https://epizy.com</a></p>
+<p>-（3）github page<br>
+拉取后文的setdiaoyong@teamAPI.git 库， 将库名改成   自己用户名.github.io<br>
+或直接在github中创建  用户名.github.io 的名字的库，上传代码，<br>
+访问地址是https://自己用户名.github.io</p>
+<h1 id="特别说明">特别说明</h1>
+<p>-（1）非自动调用API，靠多方部署，以及注册用户调用api保活（可能没效果），该活动信息可能不会在管理员用户活跃统计图中显示，不喜勿用。</p>
+<p>-（2）一定要设置好应用授权，web 跳转地址Redirect URIs，和，API授权，隐式授权等，不然用户登录界面报错，或闪退，以及退出后跳转报错。</p>
+<p>-（3）如果要用自己域名，需要设置ssl的https安全连接，不然在应用授权中心无法设置跳转网址Redirect URIs。还要设置Logout URL为 https://localhost:3000/，不然可能退出后跳转报错。</p>
+<p>-（4）个人账户只能登录team app，无法创建会议，只能用学校和工作账号登录进行创建，自己创建的自己组织所有子账户无需管理员授权即可登录。<br>
+<s><strong>但他人管理员账号登录即可授权，但他人子账号登录，需要其管理员对子账号进行授权，跳转本文第7小节，设置管理员授权。</strong></s> 现在E5开发者订阅下创建的应用只能自己组织内25个账号登录，个人和学校，其他组织都无法登录。</p>
+<p>-（5）具体设置参照官方项目说明，根据自己测试添加，如果不清楚，请移步官方项目github库https://github.com/OfficeDev/msteams-app-lms-meetings 。</p>
+<h1 id="前期基础">前期基础</h1>
+<p>（1）参考 <strong>浅忆博客</strong>：<a href="https://blog.curlc.com/archives/599.html">新版可续签的Office 365开发者试用订阅！E5(附自动续订的方法)</a>。申请office 365 开发者订阅。</p>
+<p>（2）参考 <strong>啊哈程序</strong>：[Github Page---- 搭建个人博客] 网址：blog.csdn.net/yuexianchang/article/details/53431703 (手动复制到浏览器）。</p>
+<h1 id="可选的三种部署路线">可选的三种部署路线</h1>
+<h2 id="1githubhttpsrendercom-或httpsvercelcom或httpsnetlifycom简单可在线拉取官方更新升级自动构建部署">（1）github+https://render.com 或https://vercel.com/或https://netlify.com（简单，可在线拉取官方更新,升级，自动构建部署）。</h2>
+<p><strong>github拉取officedev官方码，修改成自己授权的ID，在线编译部署网页</strong></p>
+<ul>
+<li>
+<p>a、 注册<a href="https://github.com/">github</a>；</p>
+</li>
+<li>
+<p>b、 拉取(页面右上角Fork)官方源代码，网址为：https://github.com/OfficeDev/msteams-app-lms-meetings  ，修改成自己授权应用ID（按下文创建应用，获得应用ID）；</p>
+</li>
+<li>
+<p>c、 用自己github账号注册部署站点 https://render.com 或https://vercel.com/或https://netlify.com</p>
+</li>
+<li>
+<p>d、 在部署站点中，选择自己修改好的，自动识别参数，直接网页最后确认，即可部署网页。</p>
+</li>
+</ul>
+<h2 id="2githubgithub-page最简单需本地编译官方更新替换静态文件升级">（2）github+github page（最简单，需本地编译官方更新，替换静态文件升级）</h2>
+<p><strong>github拉取(页面右上角Fork)博主编上传的编译好的网页文件，在github修改成自己授权的应用ID，用github page部署静态网页。</strong></p>
+<ul>
+<li>
+<p>a、 注册<a href="https://github.com/">github</a>；</p>
+</li>
+<li>
+<p>b、 拉取博主编译好的静态网页的存储库，网址为：<a href="https://github.com/aiyou9/teamAPI">https://github.com/aiyou9/teamAPI</a>，按照说明，修改成自己授权应用ID；</p>
+</li>
+<li>
+<p>c、 在Settings中修改库名为：自己github用户名.github.io。然后自动就部署成网页，访问网址为：https://自己github用户名.github.io；（本地访问可用fastgithub 参见https://navdoc.super.site/1-preparation）</p>
+</li>
+</ul>
+<h2 id="3自有空间域名部署需本地编译官方更新替换静态文件升级">（3）自有空间域名部署（需本地编译官方更新，替换静态文件升级）</h2>
+<p><strong>要在自己空间、和https连接的域名下部署，可下载编译好的网页静态文件，修改成自己授权的应用ID，自行部署</strong><br>
+（2020/10/31更新，推荐<a href="https://vercel.com/">https://vercel.com/</a>，提供免费空间，和https访问，可直接用github账户登录，拉取我的github账户中的静态文件，直接部署。）</p>
+<ul>
+<li>
+<p>a、 注册<a href="https://github.com/">github</a>；</p>
+</li>
+<li>
+<p>b、 下载网址为：<a href="https://github.com/aiyou9/teamAPI">https://github.com/aiyou9/teamAPI</a>，点击绿色下载按钮，下载zip；</p>
+</li>
+<li>
+<p>c、 上传到自有空间，按照说明，修改成自己授权应用ID，即可。</p>
+</li>
+</ul>
+<h1 id="首先创建应用及授权">首先创建应用及授权</h1>
+<p>参考原官方项目说明，网址为：github.com/OfficeDev/msteams-app-lms-meetings (手动复制到浏览器）</p>
+<p>个人设置截图如下：（2020/10/31开始更新，微软重构了Azure portal的界面，有点不一样了，后面有空再更新，之前无法设置组织内用户添加组织外应用，现在上线啦，感觉我的这个方法可能更有前途，多找一些人，使用自己上线的这team中转应用，其实就是个官方示例的开始界面《手动捂脸》）</p>
+<p>-（1）在 <a href="https://portal.azure.com/">Azure portal</a> 注册应用并授权API<br>
+<img src="https://blog.xbreeding.com/post-images/1587086835316.png" alt="" loading="lazy"></p>
+<ul>
+<li>a、 起名，授权登录用户类型（此用户类型选择好后，以后不能改，微软个人账号只能登录，无法创建会议，推荐选2供自己组织和其他组织使用，方便找其他人登录调用）</li>
+<li><strong>2022年1月3日更新，只能选择组织内了，E5开发者订阅创建的应用，只能自己组织内部的25个账号登录访问</strong></li>
+<li>，跳转地址Redirect URIs填 https://localhost:3000/（http后s最好加）</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://blog.xbreeding.com/post-images/1587086887866.png" alt="" loading="lazy"></figure>
+<ul>
+<li>b、如下图，填4个地方：1、Redirect URIs中填https://localhost:3000/（http后s最好加，上一步已填好）；2、Redirect URIs再点击 add URL填上自己要部署https网址，如我的https://teamstudy.onrender.com/（这里网址可不断添加自己在不同空间部署成功的的网址，实现多方部署，但都必须是有ssl认证的https连接）例如，还部署在了githubpage，就继续增加github page的网址：https://&lt;自己用户名&gt;.github.io，3、Logout URL填 https://localhost:3000/（http后必须加s），4、勾选隐式授权access token，ID token。</li>
+</ul>
+<p><img src="https://blog.xbreeding.com/post-images/1587086915551.png" alt="" loading="lazy"><br>
+源代码中有退出跳转网址路径<br>
+<img src="https://blog.xbreeding.com/post-images/1587087829180.png" alt="" loading="lazy"></p>
+<ul>
+<li>c、复制应用ID，待用，进入API授权设置</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://blog.xbreeding.com/post-images/1587086943633.png" alt="" loading="lazy"></figure>
+<ul>
+<li>d、设置用户调用api，搜索online，选择readwrite权限</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://blog.xbreeding.com/post-images/1587087016393.png" alt="" loading="lazy"></figure>
+<ul>
+<li>e、根据个人使用账户权限，可能要管理员授权使用该API，可以在右上角切换管理员账户，</li>
+</ul>
+<figure data-type="image" tabindex="4"><img src="https://blog.xbreeding.com/post-images/1587087033373.png" alt="" loading="lazy"></figure>
+<ul>
+<li>f、点击进行管理员授权</li>
+</ul>
+<p><img src="https://blog.xbreeding.com/post-images/1587087047023.png" alt="" loading="lazy"><br>
+-（额外提示）一个ID可以对应多个自己部署的https:域名，在web （经群友<strong>别恋</strong>验证）</p>
+<figure data-type="image" tabindex="5"><img src="https://blog.xbreeding.com/post-images/1587087067227.png" alt="" loading="lazy"></figure>
+<h1 id="网页部署">网页部署</h1>
+<h2 id="1githubrender在线编译部署">（1）github+render在线编译部署</h2>
+<p>2022年1月3日更新：render网站改版，可以直接选web service，使用nodejs命令，yarn build<br>
+<img src="https://blog.xbreeding.com/post-images/1641164513323.jpg" alt="" loading="lazy"></p>
+<ul>
+<li>a、 拉取官方项目库</li>
+</ul>
+<figure data-type="image" tabindex="6"><img src="https://blog.xbreeding.com/post-images/1587087158259.png" alt="" loading="lazy"></figure>
+<ul>
+<li>b、 找到文件，点击修改， 修改成自己的应用ID<br>
+<img src="https://blog.xbreeding.com/post-images/1587095993662.png" alt="" loading="lazy"></li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://blog.xbreeding.com/post-images/1587087385884.png" alt="" loading="lazy"></figure>
+<ul>
+<li>c、 用拉取的github账号登录render, 创建web空间，选择修改好应用ID的自己github库</li>
+</ul>
+<figure data-type="image" tabindex="8"><img src="https://blog.xbreeding.com/post-images/1587087523215.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://blog.xbreeding.com/post-images/1587087458844.png" alt="" loading="lazy"></figure>
+<ul>
+<li>
+<p>d、 自动识别项目，填写名称，该名称就是给出网址的二级域名，其他无需更改，直接点击确认。<br>
+<img src="https://blog.xbreeding.com/post-images/1587096508631.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>e、部署成功后，就给出访问网址，填写到之前应用授权处。</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="10"><img src="https://blog.xbreeding.com/post-images/1587087616891.png" alt="" loading="lazy"></figure>
+<h2 id="2githubgithub-page部署">（2）github+github Page部署</h2>
+<ul>
+<li>a、拉取博主github上传编译好的网页文件：网址为：github.com/setdiaoyong/setdiaoyong.github.io (手动复制到浏览器）</li>
+</ul>
+<figure data-type="image" tabindex="11"><img src="https://blog.xbreeding.com/post-images/1587087673518.png" alt="" loading="lazy"></figure>
+<ul>
+<li>
+<p>b、在github网页中打开static\js，分别搜索main.b09a1c35.chunk.js和main.b09a1c35.chunk.js.map ，打开后，点击右上角笔图标，进行编辑，分别搜索 {授权appID} ，将 {授权appID}  连 {}挂号 一起替换成至自己设置好的app ID<br>
+<img src="https://blog.xbreeding.com/post-images/1587087271380.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>c、修改库名为：自己github用户名.github.io</p>
+</li>
+</ul>
+<figure data-type="image" tabindex="12"><img src="https://blog.xbreeding.com/post-images/1587087703757.png" alt="" loading="lazy"></figure>
+<ul>
+<li>d、修改好，滚动本页到下方，可以看到，访问地址，即可访问</li>
+</ul>
+<figure data-type="image" tabindex="13"><img src="https://blog.xbreeding.com/post-images/1587087873568.png" alt="" loading="lazy"></figure>
+<p>##（3）自由空间域名部署及设置参照github page部署方法</p>
+<h1 id="访问网页">访问网页</h1>
+<ul>
+<li>a、在浏览器隐私模式中（防止自动登录影响），访问部署成功的网址</li>
+</ul>
+<figure data-type="image" tabindex="14"><img src="https://blog.xbreeding.com/post-images/1587087924283.png" alt="" loading="lazy"></figure>
+<ul>
+<li>b、登录账户，不报错，不闪退，跳转进入如下界面</li>
+</ul>
+<figure data-type="image" tabindex="15"><img src="https://blog.xbreeding.com/post-images/1587087952044.png" alt="" loading="lazy"></figure>
+<ul>
+<li>c、创建一个meeting，此次省略截图，完成调用，也继续可跳转到web端的team视频会议软件体验一下</li>
+</ul>
+<figure data-type="image" tabindex="16"><img src="https://blog.xbreeding.com/post-images/1587088091091.png" alt="" loading="lazy"></figure>
+<h1 id="问题解决">问题解决</h1>
+<ul>
+<li>a、关键是授权设置，注意用设置登录类型范围内的账户登录，</li>
+<li>b、如果登录报错，要看具体错误类型，再回去修改授权，未设置好Redirect URIs，会提示Redirect URIs不符合</li>
+<li>c、如果登录闪退，隐式授权access token 和ID token 未勾选</li>
+</ul>
+<p>注：感谢浅忆博客-E5技术交流群的群友：<strong>别恋</strong>，<strong>流浪</strong> 提供了反馈。</p>
+<h1 id="邀请他人注册调用的授权设置官方已对e5开发者订阅完全限制只能组织内子账号调用部署的应用">邀请他人注册调用的授权设置（官方已对E5开发者订阅完全限制，只能组织内子账号调用部署的应用）</h1>
+<h2 id="1管理员中心设置允许非管理员用户添加官方已上线">1.管理员中心设置允许非管理员用户添加（官方已上线）</h2>
+<p><s>（官方preview）<br>
+官方还在开发，设置后无法保存。</s>~~<br>
+<img src="https://blog.xbreeding.com/post-images/1587295592959.png" alt="" loading="lazy">~~<br>
+2020/10/31更新<br>
+官方已上线了🏳️‍🌈🏳️‍🌈🏳️‍🌈<br>
+<img src="https://blog.xbreeding.com/post-images/1604075825809.png" alt="" loading="lazy"></p>
+<h2 id="2管理员登录特定网址授权本节作废官方提供后台页面设置选项了"><s>2.管理员登录特定网址授权（本节作废，官方提供后台页面设置选项了）</s></h2>
+<ul>
+<li>a、子账号登录他人部署的应用，会报出需要管理员授权<br>
+<img src="https://blog.xbreeding.com/post-images/1587091316482.png" alt="" loading="lazy"><br>
+<s>- b、可以从要登录应用跳转的微软sigin in界面复制网址来提取登录应用id和redirect_uri：</s><br>
+<img src="https://blog.xbreeding.com/post-images/1587086688972.png" alt="提取信息" loading="lazy"></li>
+<li><s>c、将提取的应用id和redirect_uri替换以下网址的部分：login.microsoftonline.com/common/adminconsent?client_id=要登录的应用ID&amp;redirect_uri=要登录应用的跳转地址</s><br>
+<s>- d、 将替换好的网址复制到浏览器 .</s><br>
+参见<a href="https://docs.microsoft.com/zh-CN/microsoft-365/admin/add-users/about-admin-roles?WT.mc_id=365AdminCSH&amp;view=o365-worldwide">官方文档1</a>，<a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant" title="官方文档2">官方文档2</a>、<a href="https://docs.microsoft.com/zh-cn/graph/permissions-reference" title="官方文档3">官方文档3</a>、<a href="https://docs.microsoft.com/zh-cn/graph/auth-cloudsolutionprovider" title="官方文档4*">官方文档4*</a><br>
+<s>- e、修改好，用管理员账号登录，接受应用需要的授权，然后在azure中修改：</s><br>
+<img src="https://blog.xbreeding.com/post-images/1587092151066.png" alt="" loading="lazy"></li>
+<li><s>f、打开组织应用</s><br>
+<img src="https://blog.xbreeding.com/post-images/1587092143391.png" alt="" loading="lazy"></li>
+<li><s>g、打开所有应用，搜索之前记录的他人应用名</s><br>
+<img src="https://blog.xbreeding.com/post-images/1587092163163.png" alt="" loading="lazy"></li>
+<li><s>h、以自己部署的为例，需要更换为在所有应用中搜索，我部署的应用名为teamstudy。</s><br>
+<img src="https://blog.xbreeding.com/post-images/1587092135736.png" alt="" loading="lazy"></li>
+<li>~~ i、点击添加用户，此处已有的一个用户为管理员~~<br>
+<img src="https://blog.xbreeding.com/post-images/1587092113693.png" alt="" loading="lazy"></li>
+<li>~~ j、添加允许登录的子账号~~<br>
+<img src="https://blog.xbreeding.com/post-images/1587092106702.png" alt="" loading="lazy"></li>
+<li>~~ k、删除管理员授权，保证安全~~<br>
+<img src="https://blog.xbreeding.com/post-images/1587092099707.png" alt="" loading="lazy"></li>
+</ul>
+<h1 id="未来计划">未来计划</h1>
+<p><s><strong>（1）周期性定时邮件及本地客户端自动回复维持子账号电子邮件活跃度，可能没有权重</strong></s></p>
+<p><s><strong>（2）已检测，官方可能已忽略，不会识别为用户活跃——微软自动化工作流软件Power Automate提高子账号活跃度。<a href="https://docs.microsoft.com/zh-cn/learn/modules/get-started-flows/">参考官方学习文档</a>。</strong></s></p>
+<p><s><strong>（3）网上有提到，绑定自己的域名，有可能更容易保活</strong></s></p>
+<p><strong>（4）待实施部署的网址，使用edge，chrome浏览器，登录账号，安装automa插件，设置自动化流程，进行会议的创建</strong>😘</p>
+<p><strong>续订随缘</strong></p>
+<h1 id="赞赏支持作者">赞赏，支持作者</h1>
+<p><strong>如果觉得本文对您有所帮助，请点击￥赞赏￥按钮，为作者原创加油鼓励</strong></p>
+]]></content>
+    </entry>
+</feed>
